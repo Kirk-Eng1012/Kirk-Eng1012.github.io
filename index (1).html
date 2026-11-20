@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kirk Shi</title>
+<meta name="description" content="Kirk Shi is a bilingual homeroom teacher and English teacher, former English Department Co-Lead and native Mandarin speaker with the IB Certificate in Teaching and Learning (PYP).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&display=swap" rel="stylesheet">
+<style>
+/* Layout idea: left-aligned editorial column on a 12-col grid; section titles sit in a
+   narrow left rail, content in a wide right column. One bold move: the name and the
+   highlighter marks. Everything else stays quiet. */
+:root {
+  --paper: #F4F5F0;
+  --surface: #FFFFFF;
+  --ink: #16233F;
+  --muted: #586379;
+  --line: #D8DBD2;
+  --accent: #2747E0;
+  --on-accent: #FFFFFF;
+  --mark: #FFD94D;
+  --on-mark: #16233F;
+  --mark-fill: #FFD94D;
+
+  --display: "Bricolage Grotesque", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+
+  --gutter: clamp(20px, 5vw, 56px);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #101827;
+    --surface: #182236;
+    --ink: #EDF0F5;
+    --muted: #A5AFC2;
+    --line: #2B3751;
+    --accent: #95A9FF;
+    --on-accent: #101827;
+    --mark: #F5CB3C;
+    --on-mark: #16233F;
+    --mark-fill: rgba(245, 203, 60, 0.30);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #101827;
+  --surface: #182236;
+  --ink: #EDF0F5;
+  --muted: #A5AFC2;
+  --line: #2B3751;
+  --accent: #95A9FF;
+  --on-accent: #101827;
+  --mark: #F5CB3C;
+  --on-mark: #16233F;
+  --mark-fill: rgba(245, 203, 60, 0.30);
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 1.1875rem;
+  line-height: 1.55;
+  font-optical-sizing: auto;
+}
+img { max-width: 100%; display: block; }
+a { color: var(--accent); text-underline-offset: 0.18em; }
+a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+h1, h2, h3 { font-family: var(--display); margin: 0; text-wrap: balance; }
+p { margin: 0; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+
+.wrap { max-width: 1160px; margin-inline: auto; padding-inline: var(--gutter); }
+.skip {
+  position: absolute; left: var(--gutter); top: -60px;
+  background: var(--ink); color: var(--paper); padding: 8px 14px; border-radius: 6px;
+  font-family: var(--display); font-size: 0.9rem; text-decoration: none;
+}
+.skip:focus { top: 10px; z-index: 10; }
+
+/* Highlighter marks */
+mark {
+  color: inherit;
+  background-image: linear-gradient(var(--mark-fill), var(--mark-fill));
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 0.02em 0.14em;
+  margin-inline: -0.06em;
+  border-radius: 0.14em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  animation: sweep 0.7s cubic-bezier(.2,.7,.2,1) both;
+}
+mark:nth-of-type(2) { animation-delay: 0.35s; }
+@keyframes sweep { from { background-size: 0% 100%; } to { background-size: 100% 100%; } }
+
+/* Top bar */
+.top {
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+}
+.top .wrap {
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  padding-block: 14px;
+}
+.brand {
+  font-family: var(--display); font-weight: 700; font-size: 1.05rem;
+  color: var(--ink); text-decoration: none; letter-spacing: -0.01em; white-space: nowrap;
+}
+.top nav { overflow-x: auto; }
+.top nav ul { display: flex; gap: clamp(14px, 2.4vw, 30px); }
+.top nav a {
+  font-family: var(--display); font-size: 0.95rem; font-weight: 500;
+  color: var(--muted); text-decoration: none; white-space: nowrap;
+  padding-block: 4px; display: inline-block;
+}
+.top nav a:hover { color: var(--ink); }
+
+/* Hero */
+.hero { padding-block: clamp(36px, 7vw, 84px) clamp(36px, 6vw, 72px); }
+.hero-grid {
+  display: grid; gap: clamp(28px, 5vw, 64px);
+  grid-template-columns: minmax(0, 1fr) minmax(200px, 320px);
+  align-items: end;
+}
+.eyebrow {
+  font-family: var(--display); font-size: 0.875rem; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
+}
+h1 {
+  font-size: clamp(4.25rem, 15vw, 11.5rem);
+  font-weight: 800;
+  font-variation-settings: "wdth" 82;
+  line-height: 0.86;
+  letter-spacing: -0.045em;
+  margin-block: 0.12em 0.2em;
+  margin-left: -0.04em;
+}
+.lede {
+  font-size: clamp(1.35rem, 2.3vw, 1.75rem);
+  line-height: 1.4;
+  max-width: 30em;
+  text-wrap: pretty;
+}
+.portrait { position: relative; justify-self: end; width: 100%; max-width: 320px; }
+.portrait::before {
+  content: ""; position: absolute; inset: 14% -14px -14px 14%;
+  background: var(--mark); border-radius: 6px;
+}
+.portrait img {
+  position: relative; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 30%;
+  border-radius: 6px; border: 1px solid var(--line); background: #FFFFFF;
+}
+
+.facts {
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0 clamp(16px, 3vw, 40px);
+  margin: clamp(36px, 6vw, 64px) 0 0;
+}
+.facts div { border-top: 2px solid var(--ink); padding-top: 12px; }
+.facts dt {
+  font-family: var(--display); font-weight: 700; font-size: clamp(1.9rem, 4vw, 2.75rem);
+  line-height: 1; letter-spacing: -0.03em; font-variant-numeric: tabular-nums;
+}
+.facts dd { margin: 6px 0 0; color: var(--muted); font-size: 1rem; line-height: 1.35; }
+
+/* Sections */
+section { padding-block: clamp(44px, 7vw, 88px); border-top: 1px solid var(--line); }
+.split {
+  display: grid; gap: clamp(18px, 4vw, 56px);
+  grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+}
+h2 {
+  font-size: clamp(1.75rem, 3.2vw, 2.5rem);
+  font-weight: 700; letter-spacing: -0.025em; line-height: 1.05;
+  font-variation-settings: "wdth" 90;
+}
+.split > header p { color: var(--muted); font-size: 1.05rem; margin-top: 10px; max-width: 22em; }
+.prose { display: grid; gap: 1em; max-width: 34em; }
+
+/* Continuum chart */
+.continuum { background: var(--paper); }
+.continuum-head { display: grid; gap: 10px; max-width: 40em; margin-bottom: clamp(24px, 4vw, 40px); }
+.continuum-head p { color: var(--muted); }
+.axis {
+  position: relative; height: 22px;
+  font-family: var(--display); font-size: 0.75rem; font-weight: 500; color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.axis span { position: absolute; top: 0; transform: translateX(-50%); white-space: nowrap; }
+.axis span:first-child { transform: none; }
+.axis span:last-child { transform: translateX(-100%); }
+.bars {
+  display: grid; grid-template-columns: repeat(16, minmax(0, 1fr)); row-gap: 8px;
+  padding-block: 10px;
+  border-inline: 1px solid var(--line);
+  background-image: repeating-linear-gradient(to right, var(--line) 0 1px, transparent 1px calc(100% / 16));
+}
+.bar {
+  height: 46px; display: flex; align-items: center; padding-inline: 12px;
+  font-family: var(--display); font-weight: 700; font-size: 1rem; letter-spacing: 0.02em;
+  border-radius: 4px; transform-origin: left center;
+  animation: grow 0.8s cubic-bezier(.2,.7,.2,1) both;
+}
+.bar.pyp { grid-column: 1 / 10; grid-row: 1; background: var(--mark); color: var(--on-mark); }
+.bar.myp { grid-column: 9 / 14; grid-row: 2; background: var(--accent); color: var(--on-accent); animation-delay: 0.15s; }
+.bar.dp  { grid-column: 14 / 17; grid-row: 3; background: var(--ink); color: var(--paper); animation-delay: 0.3s; }
+@keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+.programmes {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(20px, 3vw, 40px); margin-top: clamp(24px, 4vw, 40px);
+}
+.programmes li { display: grid; gap: 4px; align-content: start; }
+.programmes h3 { font-size: 1.15rem; font-weight: 700; display: flex; align-items: center; gap: 10px; }
+.chip { width: 14px; height: 14px; border-radius: 3px; flex: none; }
+.chip.pyp { background: var(--mark); }
+.chip.myp { background: var(--accent); }
+.chip.dp  { background: var(--ink); }
+.programmes .ages {
+  font-family: var(--display); font-size: 0.875rem; color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.programmes p { font-size: 1.05rem; line-height: 1.45; }
+
+/* Experience */
+.roles { display: grid; gap: clamp(32px, 5vw, 52px); }
+.role { display: grid; gap: 10px; }
+.when {
+  font-family: var(--display); font-size: 0.9rem; font-weight: 600; color: var(--muted);
+  font-variant-numeric: tabular-nums; letter-spacing: 0.01em;
+}
+.role h3 { font-size: clamp(1.3rem, 2.2vw, 1.6rem); font-weight: 700; letter-spacing: -0.015em; line-height: 1.15; }
+.where { color: var(--muted); font-size: 1.05rem; line-height: 1.4; }
+.role ul { display: grid; gap: 0.6em; margin-top: 6px; max-width: 36em; }
+.role li { padding-left: 1.2em; position: relative; }
+.role li::before {
+  content: ""; position: absolute; left: 0; top: 0.62em;
+  width: 0.5em; height: 0.5em; background: var(--mark); border-radius: 2px;
+}
+.also {
+  font-family: var(--display); font-size: 0.95rem; font-weight: 600;
+  display: inline-block; border: 1px solid var(--line); border-radius: 999px; padding: 3px 12px;
+  background: var(--surface); width: fit-content;
+}
+
+/* Practice */
+.practice { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(24px, 4vw, 44px) clamp(24px, 4vw, 48px); }
+.practice li { display: grid; gap: 6px; align-content: start; border-top: 2px solid var(--ink); padding-top: 14px; }
+.practice h3 { font-size: 1.25rem; font-weight: 700; letter-spacing: -0.01em; }
+.practice p { font-size: 1.08rem; line-height: 1.5; }
+
+/* Credentials */
+.cred-groups { display: grid; gap: clamp(28px, 4vw, 44px); }
+.cred-groups h3 {
+  font-size: 0.875rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 4px;
+}
+.cred li {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 24px; align-items: baseline;
+  padding-block: 14px; border-bottom: 1px solid var(--line);
+}
+.cred strong { font-family: var(--display); font-weight: 700; font-size: 1.15rem; letter-spacing: -0.01em; }
+.cred .sub { grid-column: 1; color: var(--muted); font-size: 1.02rem; line-height: 1.4; }
+.cred .when { grid-column: 2; grid-row: 1; text-align: right; white-space: nowrap; }
+
+/* Photo slots and fill-in notes (draft markers, removed as real material arrives) */
+.slot { margin: 0; display: grid; gap: 8px; align-content: start; min-width: 0; }
+.slot-box {
+  aspect-ratio: var(--ar, 4 / 3);
+  border: 2px dashed color-mix(in srgb, var(--muted) 60%, transparent);
+  border-radius: 6px;
+  background:
+    repeating-linear-gradient(135deg, transparent 0 14px, color-mix(in srgb, var(--muted) 14%, transparent) 14px 15px),
+    color-mix(in srgb, var(--ink) 4%, transparent);
+  display: grid; place-content: center; justify-items: center; gap: 8px;
+  text-align: center; padding: 16px;
+  width: 100%; min-width: 0; overflow: hidden;
+}
+.slot-n {
+  font-family: var(--display); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.04em;
+  background: var(--mark); color: var(--on-mark); border-radius: 999px; padding: 3px 12px;
+}
+.slot-what { font-family: var(--display); font-weight: 600; font-size: 0.98rem; line-height: 1.3; max-width: 18em; }
+.slot-hint { font-family: var(--display); font-size: 0.8rem; color: var(--muted); }
+.slot figcaption { font-family: var(--display); font-size: 0.85rem; color: var(--muted); line-height: 1.35; }
+.todo {
+  font-family: var(--display); font-size: 0.92rem; line-height: 1.4;
+  border: 1.5px dashed var(--accent); border-radius: 6px; padding: 10px 14px; max-width: 36em;
+}
+.todo span {
+  display: block; font-weight: 700; font-size: 0.75rem; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--accent); margin-bottom: 2px;
+}
+
+.surface { background: var(--surface); }
+.sec-head { display: grid; gap: 10px; max-width: 40em; margin-bottom: clamp(28px, 5vw, 52px); }
+.sec-head p { color: var(--muted); }
+
+/* Beliefs */
+.beliefs { display: grid; }
+.beliefs li {
+  display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 6fr);
+  gap: 10px clamp(20px, 4vw, 56px); align-items: start;
+  padding-block: clamp(20px, 3vw, 30px); border-top: 2px solid var(--ink);
+}
+.beliefs h3 {
+  font-size: clamp(1.45rem, 2.9vw, 2.15rem); font-weight: 700; line-height: 1.08;
+  letter-spacing: -0.025em; font-variation-settings: "wdth" 88;
+}
+.beliefs p { max-width: 30em; }
+
+/* Class teacher */
+.stack { display: grid; gap: clamp(20px, 3vw, 32px); }
+.shots { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.shots .wide { grid-column: 1 / -1; }
+
+/* Practice rows */
+.pr-rows { display: grid; gap: clamp(36px, 6vw, 72px); }
+.pr-row {
+  display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap: clamp(20px, 4vw, 56px); align-items: center;
+}
+.pr-row:nth-child(even) .slot { order: 2; }
+.pr-text { display: grid; gap: 12px; max-width: 32em; }
+.pr-text h3 { font-size: clamp(1.4rem, 2.6vw, 1.9rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
+.together {
+  margin-top: clamp(36px, 6vw, 72px); border-top: 2px solid var(--ink); padding-top: 18px;
+  display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: 10px clamp(20px, 4vw, 56px);
+}
+.together h3 { font-size: 1.3rem; font-weight: 700; letter-spacing: -0.01em; }
+.together p { max-width: 34em; }
+
+/* Unit case study */
+.unit {
+  border: 2px solid var(--ink); border-radius: 8px; background: var(--paper);
+  padding: clamp(20px, 4vw, 44px); display: grid; gap: clamp(28px, 4vw, 44px);
+  margin-bottom: clamp(36px, 6vw, 72px);
+}
+.unit-row { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(20px, 4vw, 48px); align-items: start; }
+.unit-text { display: grid; gap: 16px; }
+.unit h3 {
+  font-size: clamp(1.9rem, 4.4vw, 3.1rem); font-weight: 800; line-height: 0.98;
+  letter-spacing: -0.035em; font-variation-settings: "wdth" 84;
+}
+.meta { display: flex; flex-wrap: wrap; gap: 8px; }
+.meta li {
+  font-family: var(--display); font-size: 0.85rem; font-weight: 600;
+  border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 3px 12px;
+}
+.central { margin: 0; border-left: 6px solid var(--mark); padding-left: 16px; display: grid; gap: 4px; }
+.central span { font-family: var(--display); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.central p { font-family: var(--display); font-weight: 600; font-size: clamp(1.15rem, 2vw, 1.4rem); line-height: 1.25; letter-spacing: -0.01em; }
+.loi { display: grid; }
+.loi li { border-top: 1px solid var(--line); padding-block: 9px; font-size: 1.05rem; }
+.loi-title { font-family: var(--display); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.journey { display: grid; gap: 0; counter-reset: step; }
+.journey li {
+  counter-increment: step; display: grid; grid-template-columns: 2.2rem minmax(0, 1fr); gap: 4px 14px;
+  border-top: 2px solid var(--ink); padding-block: 14px;
+}
+.journey li::before {
+  content: counter(step); grid-row: 1 / span 2;
+  font-family: var(--display); font-weight: 800; font-size: 1.6rem; line-height: 1; font-variant-numeric: tabular-nums;
+}
+.journey h4 { margin: 0; font-family: var(--display); font-size: 1.15rem; font-weight: 700; letter-spacing: -0.01em; }
+.journey p { grid-column: 2; font-size: 1.05rem; line-height: 1.5; }
+
+/* Families */
+.fam-grid {
+  display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
+  gap: clamp(24px, 4vw, 56px); align-items: start;
+}
+.fam-points { display: grid; gap: 0; margin: 0; }
+.fam-points div { border-top: 1px solid var(--line); padding-block: 14px; display: grid; gap: 2px; }
+.fam-points div:first-child { border-top: 2px solid var(--ink); }
+.fam-points dt { font-family: var(--display); font-weight: 700; font-size: 1.12rem; letter-spacing: -0.01em; }
+.fam-points dd { margin: 0; max-width: 30em; }
+.voices-head { margin-top: clamp(40px, 6vw, 72px); margin-bottom: 20px; display: grid; gap: 6px; max-width: 40em; }
+.voices-head h3 { font-size: clamp(1.4rem, 2.6vw, 1.9rem); font-weight: 700; letter-spacing: -0.02em; }
+.voices-head p { color: var(--muted); font-size: 1.05rem; }
+.voices { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+
+/* Real photos */
+.pic { margin: 0; display: grid; gap: 8px; align-content: start; min-width: 0; }
+.pic img { width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--line); background: var(--surface); }
+.pic.cover img { aspect-ratio: var(--ar, 4 / 3); object-fit: cover; }
+.pic figcaption { font-family: var(--display); font-size: 0.85rem; color: var(--muted); line-height: 1.35; }
+.gallery3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.conf { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.8fr); gap: 16px; margin-top: clamp(28px, 4vw, 44px); }
+.conf-cap { font-family: var(--display); font-size: 0.85rem; color: var(--muted); margin-top: 8px; }
+
+/* A note home: translated exchange */
+.chat { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: clamp(16px, 2.5vw, 24px); display: grid; gap: 12px; }
+.chat-title { font-family: var(--display); font-weight: 700; font-size: 1.05rem; letter-spacing: -0.01em; }
+.chat-note { font-family: var(--display); font-size: 0.8rem; color: var(--muted); line-height: 1.35; }
+.b { max-width: 88%; padding: 10px 14px; border-radius: 14px; font-size: 1rem; line-height: 1.45; display: grid; gap: 2px; }
+.b span { font-family: var(--display); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.b.t { justify-self: end; background: color-mix(in srgb, var(--accent) 13%, var(--surface)); border-bottom-right-radius: 4px; }
+.b.p { justify-self: start; background: var(--paper); border: 1px solid var(--line); border-bottom-left-radius: 4px; }
+
+/* Parent quotes */
+.lead-quote { margin: 0 0 clamp(20px, 3vw, 32px); border-left: 8px solid var(--mark); padding-left: clamp(16px, 2.5vw, 28px); display: grid; gap: 12px; max-width: 46em; }
+.lead-quote p { font-size: clamp(1.3rem, 2.4vw, 1.75rem); line-height: 1.35; text-wrap: pretty; }
+.quotes { columns: 3 260px; column-gap: 16px; }
+.q { break-inside: avoid; margin: 0 0 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 18px 20px; display: grid; gap: 10px; }
+.q p { font-size: 1.08rem; line-height: 1.5; }
+.who { font-family: var(--display); font-size: 0.82rem; font-weight: 600; color: var(--muted); line-height: 1.3; }
+.originals-head { margin: clamp(28px, 4vw, 44px) 0 14px; font-family: var(--display); font-size: 0.875rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.originals { columns: 3 240px; column-gap: 14px; }
+.originals img { width: 100%; height: auto; display: block; margin-bottom: 14px; border-radius: 8px; border: 1px solid var(--line); break-inside: avoid; }
+
+/* Colleagues */
+.colleagues { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: clamp(20px, 4vw, 56px); margin-top: clamp(24px, 4vw, 40px); align-items: start; }
+.colleagues .pic img { max-width: 300px; }
+.colleagues .q { margin: 0; }
+.col-quotes { display: grid; gap: 16px; }
+
+/* Galleries of real photos */
+.gal { columns: 4 200px; column-gap: 12px; }
+.gal img { width: 100%; height: auto; display: block; margin: 0 0 12px; border-radius: 6px; border: 1px solid var(--line); break-inside: avoid; background: var(--surface); }
+.act-group { display: grid; gap: 14px; padding-top: clamp(20px, 3vw, 28px); margin-top: clamp(28px, 4vw, 44px); border-top: 2px solid var(--ink); }
+.act-group:first-of-type { margin-top: 0; }
+.act-head { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: 6px clamp(20px, 4vw, 56px); align-items: baseline; }
+.act-head h3 { font-size: clamp(1.3rem, 2.4vw, 1.7rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
+.act-head p { color: var(--muted); font-size: 1.05rem; max-width: 34em; }
+.small-note { font-family: var(--display); font-size: 0.85rem; color: var(--muted); line-height: 1.4; }
+
+/* Parent messages: original image with its translation */
+.fbs { columns: 3 280px; column-gap: 16px; }
+.fb { break-inside: avoid; margin: 0 0 16px; background: var(--paper); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.fb img { width: 100%; height: auto; display: block; border-bottom: 1px solid var(--line); }
+.fb figcaption { padding: 14px 16px 16px; display: grid; gap: 8px; }
+.fb figcaption p { font-size: 1.02rem; line-height: 1.48; }
+.fb .tr { font-family: var(--display); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.fb .spk { font-family: var(--display); font-weight: 700; font-size: 0.85rem; }
+.pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; align-items: start; }
+.pair .fb { margin: 0; }
+.sub-head { margin: clamp(36px, 6vw, 64px) 0 18px; display: grid; gap: 6px; max-width: 42em; }
+.sub-head h3 { font-size: clamp(1.4rem, 2.6vw, 1.9rem); font-weight: 700; letter-spacing: -0.02em; }
+.sub-head p { color: var(--muted); font-size: 1.05rem; }
+.conf3 { grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.8fr) minmax(0, 0.75fr); }
+.gallery2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+
+/* More inquiry units */
+.units3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(20px, 3vw, 36px); margin-bottom: clamp(36px, 6vw, 72px); }
+.ucard { border-top: 2px solid var(--ink); padding-top: 16px; display: grid; gap: 14px; align-content: start; }
+.ucard h3 { font-size: clamp(1.3rem, 2.2vw, 1.6rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
+.ucard > p { font-size: 1.05rem; line-height: 1.5; }
+.ucard .central p { font-size: 1.12rem; }
+.ucard .lbl { font-family: var(--display); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 2px; }
+.units-head { font-family: var(--display); font-size: clamp(1.4rem, 2.6vw, 1.9rem); font-weight: 700; letter-spacing: -0.02em; margin: 0 0 20px; }
+
+/* Signature assignments */
+.hws { columns: 3 280px; column-gap: 16px; }
+.hw { break-inside: avoid; margin: 0 0 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.hw img { width: 100%; height: auto; display: block; border-bottom: 1px solid var(--line); }
+.hw figcaption { padding: 14px 16px 16px; display: grid; gap: 4px; }
+.hw h3 { font-size: 1.15rem; font-weight: 700; letter-spacing: -0.01em; }
+.hw p { font-size: 1.02rem; line-height: 1.45; color: var(--muted); }
+
+.room2 { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 9fr); gap: 16px; align-items: start; }
+
+/* Contact */
+.contact { background: var(--ink); color: var(--paper); border-top: 0; }
+.contact h2 { font-size: clamp(2.25rem, 6vw, 4.5rem); font-weight: 800; font-variation-settings: "wdth" 82; letter-spacing: -0.035em; line-height: 0.95; }
+.contact p { max-width: 30em; margin-top: 16px; opacity: 0.85; }
+.mail-row { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 20px; margin-top: clamp(24px, 4vw, 40px); }
+.mail {
+  font-family: var(--display); font-weight: 600; font-size: clamp(1.25rem, 3.4vw, 2rem);
+  color: var(--paper); text-decoration-color: var(--mark); text-decoration-thickness: 3px;
+  overflow-wrap: anywhere;
+}
+.contact a:focus-visible, .contact button:focus-visible { outline-color: var(--mark); }
+.copy {
+  font-family: var(--display); font-size: 0.95rem; font-weight: 700;
+  background: var(--mark); color: var(--on-mark);
+  border: 0; border-radius: 999px; padding: 10px 18px; cursor: pointer;
+}
+.copy:hover { filter: brightness(1.06); }
+footer { background: var(--ink); color: var(--paper); }
+footer .wrap {
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px;
+  padding-block: 22px; border-top: 1px solid color-mix(in srgb, var(--paper) 22%, transparent);
+  font-family: var(--display); font-size: 0.875rem; opacity: 0.8;
+}
+
+@media (max-width: 820px) {
+  .split { grid-template-columns: minmax(0, 1fr); }
+  .hero-grid { grid-template-columns: minmax(0, 1fr); align-items: start; }
+  .portrait { justify-self: start; max-width: 220px; grid-row: 1; margin-bottom: 8px; }
+  .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 24px; }
+  .programmes { grid-template-columns: minmax(0, 1fr); }
+  .practice { grid-template-columns: minmax(0, 1fr); }
+  .beliefs li, .pr-row, .together, .fam-grid, .unit-row, .colleagues, .act-head, .pair, .units3 { grid-template-columns: minmax(0, 1fr); }
+  .pr-row:nth-child(even) .slot { order: 0; }
+  .voices { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 520px) {
+  body { font-size: 1.125rem; }
+  .cred li { grid-template-columns: minmax(0, 1fr); }
+  .cred .when { grid-column: 1; grid-row: auto; text-align: left; }
+  .bar { padding-inline: 8px; font-size: 0.9rem; }
+  .shots, .gallery3, .room2 { grid-template-columns: minmax(0, 1fr); }
+  .gal { columns: 2 140px; }
+  .conf3 { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .b { max-width: 96%; }
+  .slot-what { font-size: 0.88rem; }
+  .slot-box { padding: 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  mark, .bar { animation: none; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#about">Skip to content</a>
+
+<div class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">Kirk Shi</a>
+    <nav aria-label="Sections">
+      <ul>
+        <li><a href="#philosophy">Philosophy</a></li>
+        <li><a href="#classroom">Classroom</a></li>
+        <li><a href="#practice">Practice</a></li>
+        <li><a href="#assignments">Assignments</a></li>
+        <li><a href="#activities">Activities</a></li>
+        <li><a href="#families">Families</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#credentials">Credentials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow">Bilingual homeroom teacher &amp; English teacher · Former English Department Co-Lead</p>
+          <h1>Kirk Shi</h1>
+          <p class="lede">I am a bilingual <mark>homeroom teacher and English teacher</mark>, and a native Mandarin speaker with the IB PYP teaching certificate. For two years I <mark>co-led an English department</mark> alongside its Foreign Lead, and I now teach MYP and DP English at an authorised IB World School.</p>
+        </div>
+        <div class="portrait">
+          <img src="portrait.jpg" alt="Kirk Shi smiling during a teachers' workshop" width="720" height="900">
+        </div>
+      </div>
+
+      <dl class="facts">
+        <div><dt>7</dt><dd>years of teaching, 5 of them in international school settings</dd></div>
+        <div><dt>2</dt><dd>working languages: native Mandarin and IELTS Band 8 English</dd></div>
+        <div><dt>3</dt><dd>IB programmes: certified in PYP, teaching MYP and DP</dd></div>
+        <div><dt>10</dt><dd>teachers mentored as English Department Co-Lead, 2022–2024</dd></div>
+      </dl>
+    </div>
+  </div>
+
+  <section id="about" aria-labelledby="about-title">
+    <div class="wrap split">
+      <header><h2 id="about-title">About</h2></header>
+      <div class="prose">
+        <p>I am a bilingual IB educator with seven years of teaching experience, five of them in international schools and much of that in primary classrooms.</p>
+        <p>At Future Leadership Academy I was both an English Teacher and a Homeroom Teacher, responsible for my students' learning, wellbeing and behaviour, and for communication with their families. I now teach MYP and DP English at a fully authorised IB World School in Guangzhou.</p>
+        <p>I hold the IB Certificate in Teaching and Learning (PYP) and Cambridge CELTA, and I brought PYP approaches into my own classes at Future Leadership Academy: inquiry units, differentiated tasks and student reflection.</p>
+        <p>From 2022 to 2024 I also co-led the English Department with the school's Foreign Lead, working on curriculum development, collaborative planning and teacher development.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="philosophy" class="surface" aria-labelledby="philosophy-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="philosophy-title">What I believe</h2>
+        <p>Four ideas that shape how I plan a lesson, run a class and work with a family.</p>
+      </div>
+      <ul class="beliefs">
+        <li>
+          <h3>Children learn a language by using it to find things out.</h3>
+          <p>That is why I plan English inside inquiry units. Reading, writing and talk have a purpose when they serve a question the class cares about.</p>
+        </li>
+        <li>
+          <h3>Every child needs a way in.</h3>
+          <p>A class always holds a range of readiness and language proficiency. I plan scaffolding and extension in advance, so each child can take part first and then be stretched.</p>
+        </li>
+        <li>
+          <h3>Children learn when they feel safe and known.</h3>
+          <p>A homeroom teacher is responsible for the whole child: learning, wellbeing, behaviour and a place in the class community.</p>
+        </li>
+        <li>
+          <h3>Families are part of the team.</h3>
+          <p>Regular communication about progress, wellbeing and individual needs lets school and home support the child together.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="classroom" aria-labelledby="classroom-title">
+    <div class="wrap split">
+      <header>
+        <h2 id="classroom-title">As a class teacher</h2>
+        <p>Homeroom teacher and English teacher at Future Leadership Academy.</p>
+      </header>
+      <div class="stack">
+        <div class="prose">
+          <p>As Homeroom Teacher I held day-to-day responsibility for my students' learning, wellbeing, behaviour and class community.</p>
+          <p>I worked to make the classroom caring and respectful. The class earned “Star Class” recognition, and I received School Outstanding Teacher recognition.</p>
+        </div>
+        <h3 class="units-head" style="margin: 8px 0 0">The classroom environment</h3>
+        <figure class="pic"><img src="room-firstday.jpg" alt="A classroom with a balloon on every desk, stacks of new books, bunting and a banner for the start of term" width="1200" height="800" loading="lazy"><figcaption>The first day of term: a balloon and new books on every desk, under a banner that reads “School starts!”</figcaption></figure>
+        <figure class="pic"><img src="room-wall.jpg" alt="A classroom display wall with numbered calm-down steps in English, quotations in English and Chinese, and a reading display" width="1200" height="800" loading="lazy"><figcaption>The display wall. In the centre are six steps for calming down, in English, from “Take a few slow, deep breaths” to “Talk to a friend, teacher or parent”. Beside them are quotations in English and Chinese.</figcaption></figure>
+        <div class="room2">
+          <figure class="pic"><img src="room-readingbar.jpg" alt="White shelves of children&#x27;s books under a sign reading Reading Bar in Chinese" width="800" height="1200" loading="lazy"><figcaption>The class library, the “Reading Bar”.</figcaption></figure>
+          <figure class="pic"><img src="room-readingarea.jpg" alt="A wooden bookshelf with books and flowers beside a sign listing reading-area rules in Chinese" width="1100" height="733" loading="lazy"><figcaption>The reading area and its rules: read quietly, look after the books, think, protect your eyes, put books back.</figcaption></figure>
+        </div>
+        <div class="gallery2">
+          <figure class="pic cover" style="--ar: 6 / 5"><img src="wall-communicator.jpg" alt="Hand-lettered classroom poster headed Communicator, with key words circled in red" width="800" height="669" loading="lazy"></figure>
+          <figure class="pic cover" style="--ar: 6 / 5"><img src="wall-openminded.jpg" alt="Hand-lettered classroom poster headed Open-minded" width="800" height="674" loading="lazy"></figure>
+        </div>
+        <p class="small-note">IB learner profile displays on the classroom wall.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="practice" class="surface" aria-labelledby="practice-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="practice-title">Teaching in practice</h2>
+        <p>How I plan, teach and follow up, using IB PYP approaches in my own classroom.</p>
+      </div>
+
+      <article class="unit" aria-labelledby="unit-title">
+        <div class="unit-row">
+          <div class="unit-text">
+            <p class="eyebrow">An inquiry unit up close</p>
+            <h3 id="unit-title">Coastal Erosion Protection</h3>
+            <ul class="meta">
+              <li>Grades 4–5</li>
+              <li>6 weeks</li>
+              <li>Theme: Sharing the Planet</li>
+              <li>Hainan, China</li>
+            </ul>
+            <p>Our school stood beside the sea, so I built this unit around the shoreline and took my students there. I designed it on the PYP framework, with a transdisciplinary theme, a central idea and lines of inquiry.</p>
+            <blockquote class="central">
+              <span>Central idea</span>
+              <p>Human actions can both threaten and protect the natural environment.</p>
+            </blockquote>
+            <div>
+              <p class="loi-title">Lines of inquiry</p>
+              <ul class="loi">
+                <li>The causes of coastal erosion</li>
+                <li>The impact on local communities</li>
+                <li>Solutions and actions we can take</li>
+              </ul>
+            </div>
+          </div>
+          <ol class="journey">
+            <li>
+              <h4>On the shore</h4>
+              <p>The unit opened with a field visit to the nearby coast. Students described what they saw in English and came back with their own questions to investigate.</p>
+            </li>
+            <li>
+              <h4>Three ways to show learning</h4>
+              <p>Students chose how to present their findings: a research report, an interview video or a bilingual poster.</p>
+            </li>
+            <li>
+              <h4>Save Our Coast</h4>
+              <p>Students organised a “Save Our Coast” campaign and shared what they had learned with the rest of the school and with their parents.</p>
+            </li>
+          </ol>
+        </div>
+      </article>
+
+      <h3 class="units-head">More inquiry units</h3>
+      <div class="units3">
+        <article class="ucard">
+          <h3>The Boy Who Cried Wolf</h3>
+          <ul class="meta"><li>Grade 2</li><li>Key concept: perspective</li></ul>
+          <p>A textbook fable, reshaped into a small inquiry into truth and trust.</p>
+          <blockquote class="central"><span>Central idea</span><p>Our choices affect the trust others have in us.</p></blockquote>
+          <div><p class="loi-title">Lines of inquiry</p><ul class="loi"><li>What trust is</li><li>How trust is built and broken</li><li>What happens when trust is lost</li></ul></div>
+          <p><span class="lbl">In the unit</span>Students retell the story from the villagers' point of view and from the wolf's, then collect examples from their own lives of trust being built or broken.</p>
+          <p><span class="lbl">Action</span>The class writes a trust pledge together.</p>
+        </article>
+        <article class="ucard">
+          <h3>Rama and Sita</h3>
+          <ul class="meta"><li>Grade 3</li><li>Key concepts: perspective, connection</li></ul>
+          <p>A cultural reading taught around Diwali, built into a unit on stories and values.</p>
+          <blockquote class="central"><span>Central idea</span><p>Stories carry the values of the communities that tell them.</p></blockquote>
+          <div><p class="loi-title">Lines of inquiry</p><ul class="loi"><li>The story itself</li><li>The values it expresses</li><li>How the same story is told across cultures and time</li></ul></div>
+          <p><span class="lbl">In the unit</span>Students compare the Indian Ramayana with Thai, Indonesian and Cambodian tellings, working mainly from images, then look for the values carried by stories in their own families.</p>
+          <p><span class="lbl">Action</span>Each student writes a short story or records an oral story from a grandparent.</p>
+        </article>
+        <article class="ucard">
+          <h3>Plants</h3>
+          <ul class="meta"><li>Key concept: connection</li></ul>
+          <p>A plants topic turned from describing plants into investigating relationships.</p>
+          <blockquote class="central"><span>Central idea</span><p>Living things and their environments depend on each other.</p></blockquote>
+          <div><p class="loi-title">Lines of inquiry</p><ul class="loi"><li>What plants need</li><li>How plants and animals depend on each other</li><li>How humans affect plant environments</li></ul></div>
+          <p><span class="lbl">In the unit</span>Students grow bean plants and investigate the trees on the school campus, asking why some are healthier than others.</p>
+          <p><span class="lbl">Action</span>The class makes a campus map showing which trees need more care and proposes how to help.</p>
+        </article>
+      </div>
+
+      <div class="pr-rows">
+        <div class="pr-row">
+          <figure class="pic"><img src="act-b8.jpg" alt="Kirk Shi teaching at the front of a classroom, pointing to a reading text on a screen" width="842" height="558" loading="lazy"></figure>
+          <div class="pr-text">
+            <h3>Differentiation</h3>
+            <p>I plan for different levels of readiness and English proficiency through differentiation, scaffolding and extension. The aim is for every student to participate with confidence and become a more independent learner.</p>
+          </div>
+        </div>
+        <div class="pr-row">
+          <figure class="pic"><img src="student-map.jpg" alt="Student-made concept map with branches for family, culture and education" width="900" height="619" loading="lazy"></figure>
+          <div class="pr-text">
+            <h3>Evidence of learning</h3>
+            <p>Formative assessment, classroom observation, learning journals and student reflection show me how each student is progressing. I use them to document learning and to adjust the teaching and support that follow.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="together">
+        <h3>Working in partnership</h3>
+        <p>From 2022 to 2024 I co-led the English Department as its Chinese Lead, alongside the Foreign Lead. I contributed to curriculum development and differentiated English programmes across grade levels, and mentored 10 teachers through lesson observations, collaborative planning and instructional coaching.</p>
+      </div>
+      <div class="colleagues">
+        <div class="gallery2">
+          <figure class="pic"><img src="note-2022.jpg" alt="Handwritten note dated November 2022, addressed to KK" width="588" height="768" loading="lazy"><figcaption>Handwritten note from a colleague, November 2022.</figcaption></figure>
+          <figure class="pic"><img src="note-messages.jpg" alt="Four chat messages in English from a colleague" width="588" height="618" loading="lazy"><figcaption>Messages from a colleague.</figcaption></figure>
+          <figure class="pic"><img src="note-heykk.jpg" alt="A longer chat message in English beginning Hey KK" width="588" height="786" loading="lazy"><figcaption>A message from a colleague.</figcaption></figure>
+          <figure class="pic"><img src="note-card.jpg" alt="A handwritten card addressed Dear KK, dated July 2022" width="588" height="452" loading="lazy"><figcaption>A handwritten card I received, July 2022.</figcaption></figure>
+        </div>
+        <div class="col-quotes">
+          <blockquote class="q">
+            <p>I want to let you know that I not only appreciate the efforts that you put forth for the department, but also for the individual support you provided recently. We are lucky to have someone with such great spirit &amp; dedication.</p>
+            <span class="who">From the note, November 2022</span>
+          </blockquote>
+          <blockquote class="q">
+            <p>You're this cool, fun person but you're also so professional and calm and determined. You are perfectly suited to this job and I really enjoy working with you.</p>
+            <span class="who">From the messages</span>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="assignments" aria-labelledby="assignments-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="assignments-title">Signature assignments</h2>
+        <p>Creative homework in which students use English to make something: a book, a cube, a menu, a comic.</p>
+      </div>
+      <div class="hws">
+        <figure class="hw"><img src="hw-autumn.jpg" alt="Two paper envelopes labelled Autumn filled with coloured paper leaves and mushrooms" width="1000" height="578" loading="lazy"><figcaption><h3>Autumn envelopes</h3><p>Cut-out leaves and mushrooms in an envelope, with a simile: “The leaves flutter down like a shower of golden rain.”</p></figcaption></figure>
+        <figure class="hw"><img src="hw-feelings.jpg" alt="An open handmade book with two blue characters labelled sad and nervous" width="1000" height="949" loading="lazy"><figcaption><h3>A book of feelings</h3><p>A handmade book naming a feeling and a way to cope: “When I feel nervous, I want to hide. I can take slow breaths.”</p></figcaption></figure>
+        <figure class="hw"><img src="hw-seasons.jpg" alt="Four hand-painted bookmarks with tassels, one for each season" width="1000" height="1117" loading="lazy"><figcaption><h3>Four seasons bookmarks</h3><p>Four illustrated bookmarks, each with a sentence about spring, summer, autumn or winter.</p></figcaption></figure>
+        <figure class="hw"><img src="hw-friendship.jpg" alt="Leaves with handwriting on them, one spelling FRIEND as an acrostic" width="1000" height="745" loading="lazy"><figcaption><h3>Friendship leaves</h3><p>Writing about friendship on real leaves, including an acrostic of the word FRIEND.</p></figcaption></figure>
+        <figure class="hw"><img src="hw-leaf.jpg" alt="A dried maple leaf with three short sentences written on it in red" width="1000" height="1061" loading="lazy"><figcaption><h3>A leaf to keep</h3><p>“Start where you are. Use what you have. Do what you can.”</p></figcaption></figure>
+        <figure class="hw"><img src="hw-comic.jpg" alt="A six-panel pencil comic strip with speech bubbles in English" width="1000" height="1115" loading="lazy"><figcaption><h3>Comic strip</h3><p>A six-panel comic in English in which a robot and a person argue about what art is.</p></figcaption></figure>
+        <figure class="hw"><img src="hw-wordtree.jpg" alt="A paper tree whose blossoms each carry an English word" width="1000" height="1266" loading="lazy"><figcaption><h3>Vocabulary tree</h3><p>A tree in blossom, with a word on every petal: months, ordinal numbers, possessive pronouns and places.</p></figcaption></figure>
+        <figure class="hw"><img src="hw-plates.jpg" alt="Paper plates with clay models of festival foods, labelled in English and Chinese" width="1000" height="1241" loading="lazy"><figcaption><h3>Festival food plates</h3><p>Clay models of festival foods on paper plates, labelled in English and Chinese: zongzi for the Dragon Boat Festival, mooncakes for Mid-Autumn, jiaozi for the Winter Solstice.</p></figcaption></figure>
+        <figure class="hw"><img src="hw-animalbook1.jpg" alt="A handmade kraft-paper book standing open, with animal drawings and handwritten sentences" width="1000" height="928" loading="lazy"><img src="hw-animalbook2.jpg" alt="An open spread of the animal book showing an elephant and a giraffe" width="1000" height="712" loading="lazy"><figcaption><h3>Animal book</h3><p>A handmade book with an animal and a short description on each page: “What's this? It's an elephant. It has a long nose and big ears.”</p></figcaption></figure>
+        <figure class="hw"><img src="hw-bestfriend.jpg" alt="Four photos of small handmade books titled My best friend, with drawings and sentences" width="1000" height="985" loading="lazy"><figcaption><h3>My best friend</h3><p>Mini-books describing a friend: “She is lovely and friendly, helpful and nice, clever and tall.”</p></figcaption></figure>
+        <figure class="hw"><img src="hw-cube.jpg" alt="A hand-held cardboard cube with a winter scene on one face and a spring scene on another" width="1000" height="937" loading="lazy"><figcaption><h3>Seasons cube</h3><p>A cube with a season on each face and a sentence to go with it: “Winter is cold. We play in the snow.”</p></figcaption></figure>
+        <figure class="hw"><img src="hw-lapbook.jpg" alt="A green fold-out board titled Seasons with a wheel, a wardrobe booklet, travel cards and a tree" width="1000" height="757" loading="lazy"><figcaption><h3>Seasons lapbook</h3><p>A fold-out project on the seasons: a wheel asking “Which season do you like?”, a wardrobe, travel cards and a tree in four seasons.</p></figcaption></figure>
+        <figure class="hw"><img src="hw-menu.jpg" alt="A hand-drawn restaurant menu with hot dishes, cold dishes and prices" width="673" height="882" loading="lazy"><figcaption><h3>Themed menu</h3><p>A hand-drawn menu of hot and cold dishes with prices, on a Harry Potter theme.</p></figcaption></figure>
+        <figure class="hw"><img src="hw-alphabet.jpg" alt="A sheet titled Amazing Alphabet with a flap for each letter drawn as a monster" width="1000" height="1172" loading="lazy"><figcaption><h3>Amazing Alphabet</h3><p>A lift-the-flap alphabet in which every letter is a monster with a word underneath.</p></figcaption></figure>
+        <figure class="hw"><img src="hw-watches.jpg" alt="Paper strips shaped like watches, one per letter, some coloured in, with scissors and pens" width="1000" height="1331" loading="lazy"><figcaption><h3>Phonics watches</h3><p>Printable paper watches to colour, cut out and wear, one for each letter with words that begin with it.</p></figcaption></figure>
+        <figure class="hw"><img src="hw-food.jpg" alt="Clay models of food arranged on a circle divided into labelled food groups" width="1000" height="740" loading="lazy"><figcaption><h3>Food groups</h3><p>Clay food sorted and labelled by group, including grain and protein.</p></figcaption></figure>
+        <figure class="hw"><img src="hw-colourbook.jpg" alt="The cover of a handmade book titled Colour book with layered rainbow paper" width="1000" height="1196" loading="lazy"><figcaption><h3>Colour book</h3><p>The cover of a handmade book of colours, built from layers of coloured paper.</p></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="activities" aria-labelledby="activities-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="activities-title">Activities</h2>
+        <p>School events and moments with my students at Future Leadership Academy.</p>
+      </div>
+
+      <div class="act-group">
+        <div class="act-head"><h3>Echoes of English, 2024</h3><p>The 2024 FLA English Festival &amp; Children's Day Showcase, which I hosted on stage.</p></div>
+        <div class="gal">
+          <img src="act-showcase-host.jpg" alt="Kirk Shi alone on stage with a microphone in front of the Echoes of English title screen, audience in the foreground" width="1200" height="800" loading="lazy">
+          <img src="act-showcase-finale.jpg" alt="The stage filled with children waving at the end of the showcase" width="1200" height="800" loading="lazy">
+          <img src="act-showcase-team.jpg" alt="Eleven teachers lined up on stage holding flowers after the showcase" width="1200" height="800" loading="lazy">
+          <img src="act-students-stage.jpg" alt="Two students speaking into microphones on stage" width="1100" height="734" loading="lazy">
+        </div>
+      </div>
+
+      <div class="act-group">
+        <div class="act-head"><h3>On stage</h3><p>Hosting and presenting at school events, including the FLA 5th anniversary.</p></div>
+        <div class="gal">
+          <img src="act-a2.jpg" alt="Kirk Shi holding a microphone in front of an FLA 5th Anniversary backdrop" width="758" height="484" loading="lazy">
+          <img src="act-a3.jpg" alt="Kirk Shi and a co-host on stage, each holding a script folder" width="758" height="714" loading="lazy">
+          <img src="act-b2.jpg" alt="Kirk Shi and a co-host reading from folders with microphones" width="842" height="560" loading="lazy">
+          <img src="act-a5.jpg" alt="Kirk Shi and a co-host on stage in front of a storybook backdrop" width="758" height="516" loading="lazy">
+          <img src="act-b1.jpg" alt="Kirk Shi and a co-host on stage, seen from the back of the hall" width="842" height="560" loading="lazy">
+          <img src="act-a6.jpg" alt="Kirk Shi and a colleague on stage with two young students" width="758" height="504" loading="lazy">
+          <img src="act-a1.jpg" alt="Kirk Shi standing beside a speaker at a podium" width="758" height="708" loading="lazy">
+          <img src="act-a4.jpg" alt="Kirk Shi holding a microphone beside a colleague who is presenting" width="758" height="718" loading="lazy">
+          <img src="act-recital.jpg" alt="A stage with a poem projected on a large blue screen" width="588" height="448" loading="lazy">
+        </div>
+      </div>
+
+      <div class="act-group">
+        <div class="act-head"><h3>Reading and awards</h3><p>Certificates and prizes in the school library and on stage, including the 2022 FLA English Reading Marathon.</p></div>
+        <div class="gal">
+          <img src="act-b3.jpg" alt="Kirk Shi and a colleague with three students holding certificates in the library" width="842" height="666" loading="lazy">
+          <img src="act-b6.jpg" alt="A group of students holding books and prizes in the library with two teachers" width="842" height="560" loading="lazy">
+          <img src="act-b4.jpg" alt="Kirk Shi with two students holding a prize in the library" width="842" height="560" loading="lazy">
+          <img src="act-b9.jpg" alt="Students lined up on stage in front of a slide about the English Reading Marathon" width="842" height="568" loading="lazy">
+          <img src="act-b5.jpg" alt="Kirk Shi and a colleague applauding at a table in the library" width="842" height="560" loading="lazy">
+          <img src="act-b7.jpg" alt="Kirk Shi speaking in the library" width="842" height="560" loading="lazy">
+        </div>
+      </div>
+
+      <div class="act-group">
+        <div class="act-head"><h3>Halloween</h3><p>Costumes, a class game and medals.</p></div>
+        <div class="gal">
+          <img src="act-halloween.jpg" alt="Kirk Shi in costume with three students at an outdoor Halloween event" width="900" height="877" loading="lazy">
+          <img src="act-c4.jpg" alt="Masked students posing in a classroom in front of a How To Play slide" width="1068" height="802" loading="lazy">
+          <img src="act-costumes.jpg" alt="Kirk Shi with two students in costume in the library" width="1000" height="694" loading="lazy">
+          <img src="act-c5.jpg" alt="Kirk Shi with pumpkin hair clips, with two students at a classroom desk" width="1068" height="800" loading="lazy">
+          <img src="act-medals.jpg" alt="Two students wearing medals on stage with Kirk Shi and another teacher" width="900" height="893" loading="lazy">
+          <img src="act-c3.jpg" alt="Kirk Shi with Halloween face paint, with two students" width="1068" height="1420" loading="lazy">
+        </div>
+      </div>
+
+      <div class="act-group">
+        <div class="act-head"><h3>In class and with colleagues</h3><p>Lessons, students outdoors and the teaching team.</p></div>
+        <div class="gal">
+          <img src="act-b8.jpg" alt="Kirk Shi teaching at the front of a classroom, pointing to a reading text on a screen" width="842" height="558" loading="lazy">
+          <img src="act-a7.jpg" alt="A student reading aloud at the front of a classroom while Kirk Shi takes notes" width="758" height="464" loading="lazy">
+          <img src="act-c1.jpg" alt="Students sitting together on a lawn" width="1068" height="708" loading="lazy">
+          <img src="act-a8.jpg" alt="A group of teachers posing on stage" width="758" height="496" loading="lazy">
+          <img src="act-a9.jpg" alt="Kirk Shi with two colleagues outdoors" width="758" height="506" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="families" class="surface" aria-labelledby="families-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="families-title">Working with families</h2>
+        <p>As a homeroom teacher I built partnerships with families through regular communication about academic progress, wellbeing and individual needs.</p>
+      </div>
+      <dl class="fam-points" style="max-width: 40em">
+        <div><dt>What I share</dt><dd>Academic progress, wellbeing and each child's individual needs.</dd></div>
+        <div><dt>How</dt><dd>Daily feedback to families and one-on-one parent meetings.</dd></div>
+        <div><dt>What it is for</dt><dd>School and home working together to support the child's development in both places.</dd></div>
+      </dl>
+
+      <div class="sub-head">
+        <h3>A note home, and the reply</h3>
+        <p>Two screenshots from one conversation with the parent of a Grade 3 student. Blue bubbles are my messages.</p>
+      </div>
+      <div class="pair">
+        <figure class="fb"><img src="fb-ivy1.jpg" alt="Chat screenshot: two messages from KK and a reply from a parent" width="760" height="1080" loading="lazy"><figcaption><span class="tr">Translation</span><p><span class="spk">KK:</span> At first she didn't want to do it and said she hadn't learned it by heart well enough. I encouraged her to give it a try, and said that if she wasn't happy with it this time, we could do it once more next Tuesday. But if memorising it is too tiring for her, we'll simply keep working at it in the next round of speeches!</p><p><span class="spk">KK:</span> Today's dictation was great. Apart from “weather”, a word I added at random today, she got all the others right. Ivy has been really committed to her learning lately.</p><p><span class="spk">Parent:</span> Since Ivy joined this class, her motivation to learn has gone up. That she herself is willing to learn English is something that has really delighted and surprised me. In the car on the way to school today she even told me she was full of confidence! Being nervous and shy for a first speech is fine. What I am most grateful for is your guidance. The parents all think extremely highly of you. Thank you, teacher.</p></figcaption></figure>
+        <figure class="fb"><img src="fb-ivy2.jpg" alt="Chat screenshot: a long message from KK and a reply from the same parent" width="760" height="1203" loading="lazy"><figcaption><span class="tr">Translation</span><p><span class="spk">KK:</span> That's wonderful, I'm so pleased too! Lately I can clearly feel that Ivy's motivation to learn is especially high. As soon as she saw me today she was urging me to hurry up with the dictation, hahaha, so sweet. She has made great progress with speeches too. When she first heard in class that there would be speeches, she told me she was too shy around people and asked whether she could stay off the stage. I guided her gradually, and I think today's first speech was already excellent. Every child has a different personality. Sometimes they prepare very thoroughly, get nervous on stage and forget a little of the content. That is perfectly normal, but I can see her growth and her breakthrough very clearly. I can tell how much care and support you give Ivy's learning at home. Thank you!</p><p><span class="spk">Parent:</span> Having an especially wonderful teacher during one's school years is a great happiness for both me and my child. I can still remember the teachers who helped me enormously when I was at school. For a child to like a subject, the teacher's own charm is a hugely important thing.</p></figcaption></figure>
+      </div>
+
+      <div class="sub-head">
+        <h3>What parents say</h3>
+        <p>Original messages from parents, who know me as KK. Chinese names are covered in the images and shown as [brackets] in the translations.</p>
+      </div>
+      <div class="fbs">
+        <figure class="fb"><img src="fb-arthur.jpg" alt="Original message in Chinese, names covered" width="760" height="919" loading="lazy"><figcaption><span class="tr">Translation</span><p>…the teachers and classmates by whom he was always understood, seen and supported. Arthur and I love you very, very much. I think you will do extremely well in the field of English teaching. I can see how serious, loving, open, constantly learning and full of creativity you are about your teaching. At the same time, you are especially good at seeing what shines in children and encouraging them to become better versions of themselves. I am truly very, very sad to part with such a good teacher, and at the same time very, very grateful to you for accompanying Arthur as he grew, letting him be himself and helping him become better. My heart is full of gratitude, and I often marvel at how lucky Arthur was to meet you, KK. We will always love you and always keep the memories of this wonderful journey. Your teaching and love for Arthur have become a very important part of his childhood, and he will carry them with him as he goes on. With gratitude.</p><p class="small-note">The screenshot begins mid-message.</p></figcaption></figure>
+        <figure class="fb"><img src="fb-n14.jpg" alt="Original message in Chinese" width="760" height="560" loading="lazy"><figcaption><span class="tr">Translation</span><p>Thank you, KK, for the meticulous teaching and help you gave the children during your time as homeroom teacher. You are an excellent educator, deeply loved by the children and the parents. Once again, our deepest thanks! We will actively support the work of Teacher Li and Teacher Ma and look after the children's growth together. Thank you!</p></figcaption></figure>
+        <figure class="fb"><img src="fb-n15.jpg" alt="Original message in Chinese" width="760" height="616" loading="lazy"><figcaption><span class="tr">Translation</span><p>Dear KK, I have always been grateful that, when we had just arrived at FLA, we met a teacher like you: one with great love in her heart, very approachable, conscientious and responsible. Your attentive teaching lets the children grow up in trust. You discover the children's strengths and encourage every bit of progress they make. We see your dedication and are moved by it. Thank you, dear KK.</p></figcaption></figure>
+        <figure class="fb"><img src="fb-n16.jpg" alt="Original message in Chinese" width="760" height="453" loading="lazy"><figcaption><span class="tr">Translation</span><p>Thank you, KK, for your dedication over these two years. My child is very lucky to have met such a good homeroom teacher on first arriving in Hainan. Put the load down and have a good rest. The children can still keep learning and improving with you in their English lessons.</p></figcaption></figure>
+        <figure class="fb"><img src="msg-5.jpg" alt="Original message in Chinese, name covered" width="800" height="758" loading="lazy"><figcaption><span class="tr">Translation</span><p>KK, I have very mixed feelings on seeing this news. [Her] progress and growth in English this half term are entirely down to your guidance, encouragement and kindness, and to your professional teaching skill and ability. Without your company this half term, who knows when her interest and confidence in English as a subject would ever have been kindled! For a child to meet a teacher she loves, in her studies and in life, is the greatest good fortune.</p></figcaption></figure>
+        <figure class="fb"><img src="fb-claire.jpg" alt="Chat screenshot: a message from KK and a parent&#x27;s reply" width="760" height="457" loading="lazy"><figcaption><span class="tr">Translation</span><p><span class="spk">KK:</span> Claire's dad, Claire came first in the class again in this end-of-term school exam!</p><p><span class="spk">Parent:</span> That's because you teach so well, KK. Thank you! Since you began teaching Claire, she has fallen in love with English. Thank you too for giving her the chance to host in English. She is slowly becoming willing to challenge herself.</p></figcaption></figure>
+        <figure class="fb"><img src="fb-n5.jpg" alt="Original message in Chinese" width="760" height="687" loading="lazy"><figcaption><span class="tr">Translation</span><p>I read the message on the card carefully twice and was truly moved. The one we are saddest to leave is KK. I thought again of the little school-rules video you made last year and this year's 20 May campus interviews. I really loved them. I believe that with your talent and hard work, your sensitivity and sincerity, more and better children and parents will come to like you and recognise you in the future. Even if there are small disappointments in work and life, they will be healed by love. Be sure to get in touch when you come to Shenzhen.</p></figcaption></figure>
+        <figure class="fb"><img src="fb-card.jpg" alt="A handwritten farewell card from KK to a student, in English on the left and Chinese on the right" width="850" height="605" loading="lazy"><figcaption><span class="tr">Translation</span><p>Dear Alan, when I heard you were changing schools, my first reaction was reluctance and sadness. Over the past three years you have often given your teachers and classmates very warm and happy memories. KK wants to tell you that KK is truly very proud of you. Thank you so much for always being so hardworking, motivated, kind and upright. Thank you for growing up so well, and thank you for being my student. I hope Alan will be even happier at your new school, make more good friends and love English even more. KK will always support you!</p><p class="small-note">A farewell card I wrote to a student, 11 June 2024. The translation is of the Chinese side.</p></figcaption></figure>
+        <figure class="fb"><img src="fb-alex.jpg" alt="Original message in Chinese, names covered" width="760" height="531" loading="lazy"><figcaption><span class="tr">Translation</span><p>Oh KK, my feelings on hearing this news are so mixed. Thank you for the love you have always shown Alex and [my other child]. Whether you were their homeroom teacher or only their English teacher, both of them have taken you deep into their hearts and truly adore you. May I ask, are you still in Hainan, or have you taken up a post in another province?</p></figcaption></figure>
+        <figure class="fb"><img src="fb-sj.jpg" alt="Original message in Chinese, name covered" width="760" height="531" loading="lazy"><figcaption><span class="tr">Translation</span><p>KK, it is with great reluctance that I tell you some news: [my son] will be going to school at ischool from September. We enrolled him and paid the fees today. The teacher he is saddest to leave is you! So am I! You are a rare, good teacher. Wherever you are, I hope you keep walking the path of education with conviction. Having you is a blessing for the children. I really like you so much!</p></figcaption></figure>
+        <figure class="fb"><img src="fb-arthur-term.jpg" alt="Original message in Chinese, names covered" width="588" height="568" loading="lazy"><figcaption><span class="tr">Translation</span><p>KK, you are an especially, especially dedicated teacher. Meeting you is Arthur's good fortune too. I can feel Arthur's progress this term. His reading ability has improved, and he is both more accurate and faster. Your lessons are also varied and fun, and the children have more chances to use what they learn and to show themselves. You are Arthur's favourite teacher, and I hope we carry on working together happily next term. Over the holiday, English must not be dropped. Wishing you and your family a Merry Christmas and a Happy Spring Festival. Keep well.</p></figcaption></figure>
+        <figure class="fb"><img src="fb-xx.jpg" alt="Original message in Chinese, name covered" width="760" height="360" loading="lazy"><figcaption><span class="tr">Translation</span><p>KK, thank you for looking after and teaching [my daughter] all this time. You are [her] favourite teacher. Next term we are transferring to a school in Haikou. When we have a free weekend we will come back to Clearwater Bay to see you. Wishing you all the best and every success at work. Love you.</p></figcaption></figure>
+        <figure class="fb"><img src="msg-2.jpg" alt="Original message in Chinese" width="835" height="287" loading="lazy"><figcaption><span class="tr">Translation</span><p>My child used to really resist English. Now they look forward to your lessons every day. You have completely brought out their interest. Thank you so much!</p></figcaption></figure>
+        <figure class="fb"><img src="fb-td.jpg" alt="Original message in Chinese, name covered" width="760" height="316" loading="lazy"><figcaption><span class="tr">Translation</span><p>KK, I can really see that loving you leads to loving English. [My child] takes English seriously precisely because they really like you. Thank you.</p></figcaption></figure>
+        <figure class="fb"><img src="msg-1.jpg" alt="Original message in Chinese" width="862" height="299" loading="lazy"><figcaption><span class="tr">Translation</span><p>I really must thank you, KK. My child has not only gained knowledge but also likes English more and more, and that matters more than anything.</p></figcaption></figure>
+        <figure class="fb"><img src="fb-qm.jpg" alt="Chat screenshot of three messages from a parent, name and one sentence covered" width="760" height="1081" loading="lazy"><figcaption><span class="tr">Translation</span><p>There are two things I would like to trouble you with.</p><p>[My son] would like to take your English class.</p><p>I sat in on the lesson this morning and thought you taught it so well. Because his English foundation is rather weak, […] He took your English calligraphy class before and really likes your teaching. How shall I put it, interest is the best teacher, so I can only ask whether he could transfer to your class.</p><p class="small-note">One sentence about another class is covered. The green bubble is my reply, “Of course, go ahead.”</p></figcaption></figure>
+        <figure class="fb"><img src="fb-n17.jpg" alt="Original message in Chinese" width="760" height="244" loading="lazy"><figcaption><span class="tr">Translation</span><p>Dear KK, thank you for your love and teaching for my child. Thank you so much, you have worked so hard! How lucky we are to have met a teacher as responsible as you, and one my child likes too…</p><p class="small-note">The screenshot ends mid-message.</p></figcaption></figure>
+        <figure class="fb"><img src="fb-aa.jpg" alt="Original message in Chinese" width="760" height="174" loading="lazy"><figcaption><span class="tr">Translation</span><p>Such a lovely and outstanding young woman. It really is too great a loss for FLA.</p></figcaption></figure>
+        <figure class="fb"><img src="fb-mark.jpg" alt="A parent message written in English" width="588" height="1072" loading="lazy"><figcaption><p class="small-note">Written in English by a parent after a class debate.</p></figcaption></figure>
+        <figure class="fb"><img src="card-student.jpg" alt="Two handwritten cards with a small photo placed on top" width="588" height="440" loading="lazy"><figcaption><p class="small-note">Handwritten cards I received.</p></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="continuum" aria-labelledby="continuum-title">
+    <div class="wrap">
+      <div class="continuum-head">
+        <h2 id="continuum-title">My IB experience</h2>
+        <p>The three IB programmes by student age, and what I bring to each.</p>
+      </div>
+
+      <div role="img" aria-label="Chart of IB programme age ranges: PYP ages 3 to 12, MYP ages 11 to 16, DP ages 16 to 19.">
+        <div class="axis" aria-hidden="true">
+          <span style="left:0%">Age 3</span>
+          <span style="left:50%">11</span>
+          <span style="left:56.25%">12</span>
+          <span style="left:81.25%">16</span>
+          <span style="left:100%">19</span>
+        </div>
+        <div class="bars" aria-hidden="true">
+          <div class="bar pyp">PYP</div>
+          <div class="bar myp">MYP</div>
+          <div class="bar dp">DP</div>
+        </div>
+      </div>
+
+      <ul class="programmes">
+        <li>
+          <h3><span class="chip pyp"></span>Primary Years Programme</h3>
+          <span class="ages">Ages 3–12 · certified</span>
+          <p>IB Certificate in Teaching and Learning (PYP). I applied PYP approaches in my primary classes at Future Leadership Academy from 2021 to 2026. The school itself was not an IB school.</p>
+        </li>
+        <li>
+          <h3><span class="chip myp"></span>Middle Years Programme</h3>
+          <span class="ages">Ages 11–16 · teaching since Aug 2026</span>
+          <p>MYP Language Acquisition at a fully authorised IB World School in Guangzhou.</p>
+        </li>
+        <li>
+          <h3><span class="chip dp"></span>Diploma Programme</h3>
+          <span class="ages">Ages 16–19 · teaching since Aug 2026</span>
+          <p>DP English B at the same school.</p>
+        </li>
+      </ul>
+
+      <div class="conf conf3">
+        <figure class="pic cover" style="--ar: 5 / 4"><img src="conf-speaking.jpg" alt="Kirk Shi speaking into a microphone from the audience at a conference" width="900" height="720" loading="lazy"></figure>
+        <figure class="pic cover" style="--ar: 4 / 5"><img src="conf-talking.jpg" alt="Kirk Shi in conversation during a conference break" width="720" height="900" loading="lazy"></figure>
+        <figure class="pic cover" style="--ar: 3 / 4"><img src="conf-bookfair.jpg" alt="Kirk Shi talking with an exhibitor at a table of textbooks" width="660" height="880" loading="lazy"></figure>
+      </div>
+      <p class="conf-cap">Professional learning: at the 2026 IES Concept-Based Learning Conference, and at a publishers' exhibition.</p>
+    </div>
+  </section>
+
+  <section id="experience" aria-labelledby="experience-title">
+    <div class="wrap split">
+      <header><h2 id="experience-title">Experience</h2></header>
+      <div class="roles">
+
+        <article class="role">
+          <span class="when">Aug 2026 – Present</span>
+          <h3>MYP &amp; DP English Teacher</h3>
+          <p class="where">Guangzhou Zhongshan Whampoa School for Hong Kong and Macao Students · Guangzhou, China · Fully authorised IB World School</p>
+          <ul>
+            <li>Teach MYP Language Acquisition and DP English B, planning learning around IB objectives, students' needs and appropriate levels of challenge.</li>
+            <li>Design differentiated learning and assessment for varied English proficiency levels, using formative evidence and collaborative planning to adjust teaching and support student progress.</li>
+          </ul>
+        </article>
+
+        <article class="role">
+          <span class="when">Sep 2021 – Aug 2026</span>
+          <h3>English Teacher &amp; Homeroom Teacher</h3>
+          <p class="where">Future Leadership Academy · Hainan, China</p>
+          <span class="also">English Department Co-Lead, 2022 – 2024</span>
+          <ul>
+            <li>Planned and taught English through inquiry units designed on the IB PYP framework, working with colleagues on inquiry-based learning with meaningful connections across subject areas.</li>
+            <li>As Homeroom Teacher, held day-to-day responsibility for students' learning, wellbeing, behaviour and class community. The class earned “Star Class” recognition.</li>
+            <li>As English Department Co-Lead, led the department jointly with the Foreign Lead. Contributed to curriculum development and differentiated English programmes across grade levels, and mentored 10 teachers through lesson observations, collaborative planning, professional development and instructional coaching.</li>
+            <li>Led students to a 100% Cambridge KET pass rate and district-leading English assessment results for three consecutive years. Received School Outstanding Teacher recognition.</li>
+          </ul>
+        </article>
+
+        <article class="role">
+          <span class="when">Jul 2019 – Sep 2021</span>
+          <h3>IELTS / GMAT Instructor</h3>
+          <p class="where">Shanghai Xiaoshen Education Co., Ltd. · China</p>
+          <ul>
+            <li>Taught IELTS Listening and Reading and GMAT Reading and Sentence Correction, adapting instruction to learner needs, tracking progress and keeping in regular contact with families.</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="credentials" aria-labelledby="credentials-title">
+    <div class="wrap split">
+      <header><h2 id="credentials-title">Credentials</h2></header>
+      <div class="cred-groups">
+        <div>
+          <h3>Education</h3>
+          <ul class="cred">
+            <li><strong>Master of Education</strong><span class="when">Sep 2025 – Jun 2028</span><span class="sub">Zhejiang University · in progress</span></li>
+            <li><strong>BA in English Language and Literature</strong><span class="when">Sep 2015 – Jun 2019</span><span class="sub">Sichuan University</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Professional qualifications</h3>
+          <ul class="cred">
+            <li><strong>IB Certificate in Teaching and Learning (PYP)</strong><span class="sub">University of Windsor</span></li>
+            <li><strong>Cambridge CELTA</strong><span class="sub">Certificate in English Language Teaching to Adults</span></li>
+            <li><strong>Senior High School English Teacher Certification</strong><span class="sub">China</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Languages</h3>
+          <ul class="cred">
+            <li><strong>Mandarin Chinese</strong><span class="sub">Native</span></li>
+            <li><strong>English</strong><span class="sub">IELTS Band 8 · TEM-8 (Test for English Majors)</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+      <h2 id="contact-title">Get in touch</h2>
+      <p>For teaching roles, collaboration or a conversation about IB English, email me.</p>
+      <div class="mail-row">
+        <a class="mail" href="mailto:kay1212@foxmail.com">kay1212@foxmail.com</a>
+        <button class="copy" id="copy-email" type="button">Copy email address</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Kirk Shi</span>
+    <span>Bilingual IB Educator</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var btn = document.getElementById('copy-email');
+  if (!btn) return;
+  var label = btn.textContent;
+  btn.addEventListener('click', function () {
+    var done = function (text) {
+      btn.textContent = text;
+      setTimeout(function () { btn.textContent = label; }, 2200);
+    };
+    try {
+      navigator.clipboard.writeText('kay1212@foxmail.com').then(
+        function () { done('Copied'); },
+        function () { done('Select the address to copy'); }
+      );
+    } catch (e) {
+      done('Select the address to copy');
+    }
+  });
+})();
+</script>
+</body>
+</html>
