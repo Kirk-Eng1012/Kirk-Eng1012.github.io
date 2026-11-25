@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kirk Shi | MYP Language Acquisition (English) Teacher</title>
+<script>document.documentElement.className += " js";</script>
+<meta name="description" content="Kirk Shi teaches MYP Language Acquisition (English) and DP English B at a fully authorised IB World School, with seven years of ESL/EAL teaching, the Cambridge CELTA and the IB Certificate in Teaching and Learning (PYP).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&display=swap" rel="stylesheet">
+<style>
+/* Layout idea: left-aligned editorial column on a 12-col grid; section titles sit in a
+   narrow left rail, content in a wide right column. One bold move: the name and the
+   highlighter marks. Everything else stays quiet. */
+:root {
+  --paper: #F4F5F0;
+  --surface: #FFFFFF;
+  --ink: #16233F;
+  --muted: #586379;
+  --line: #D8DBD2;
+  --accent: #2747E0;
+  --on-accent: #FFFFFF;
+  --mark: #FFD94D;
+  --on-mark: #16233F;
+  --mark-fill: #FFD94D;
+
+  --display: "Bricolage Grotesque", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+
+  --gutter: clamp(20px, 5vw, 56px);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #101827;
+    --surface: #182236;
+    --ink: #EDF0F5;
+    --muted: #A5AFC2;
+    --line: #2B3751;
+    --accent: #95A9FF;
+    --on-accent: #101827;
+    --mark: #F5CB3C;
+    --on-mark: #16233F;
+    --mark-fill: rgba(245, 203, 60, 0.30);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #101827;
+  --surface: #182236;
+  --ink: #EDF0F5;
+  --muted: #A5AFC2;
+  --line: #2B3751;
+  --accent: #95A9FF;
+  --on-accent: #101827;
+  --mark: #F5CB3C;
+  --on-mark: #16233F;
+  --mark-fill: rgba(245, 203, 60, 0.30);
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 1.1875rem;
+  line-height: 1.55;
+  font-optical-sizing: auto;
+}
+img { max-width: 100%; display: block; }
+a { color: var(--accent); text-underline-offset: 0.18em; }
+a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+h1, h2, h3 { font-family: var(--display); margin: 0; text-wrap: balance; }
+p { margin: 0; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+
+.wrap { max-width: 1160px; margin-inline: auto; padding-inline: var(--gutter); }
+.skip {
+  position: absolute; left: var(--gutter); top: -60px;
+  background: var(--ink); color: var(--paper); padding: 8px 14px; border-radius: 6px;
+  font-family: var(--display); font-size: 0.9rem; text-decoration: none;
+}
+.skip:focus { top: 10px; z-index: 10; }
+
+/* Highlighter marks */
+mark {
+  color: inherit;
+  background-image: linear-gradient(var(--mark-fill), var(--mark-fill));
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 0.02em 0.14em;
+  margin-inline: -0.06em;
+  border-radius: 0.14em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  animation: sweep 0.7s cubic-bezier(.2,.7,.2,1) both;
+}
+mark:nth-of-type(2) { animation-delay: 0.35s; }
+@keyframes sweep { from { background-size: 0% 100%; } to { background-size: 100% 100%; } }
+
+/* Top bar */
+.top {
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+  position: sticky; top: 0; z-index: 20;
+}
+section[id], #top { scroll-margin-top: 68px; }
+.totop {
+  position: fixed; right: 16px; bottom: 16px; z-index: 30;
+  font-family: var(--display); font-size: 0.95rem; font-weight: 700; text-decoration: none;
+  background: var(--ink); color: var(--paper); border: 2px solid var(--paper);
+  border-radius: 999px; padding: 10px 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+  opacity: 0; pointer-events: none; transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.totop.show { opacity: 1; pointer-events: auto; transform: none; }
+.totop:hover { background: var(--accent); color: var(--on-accent); }
+.top .wrap {
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  padding-block: 14px;
+}
+.brand {
+  font-family: var(--display); font-weight: 700; font-size: 1.05rem;
+  color: var(--ink); text-decoration: none; letter-spacing: -0.01em; white-space: nowrap;
+}
+.top nav { overflow-x: auto; }
+.top nav ul { display: flex; gap: clamp(12px, 1.6vw, 20px); }
+.top nav a {
+  font-family: var(--display); font-size: 0.9rem; font-weight: 500;
+  color: var(--muted); text-decoration: none; white-space: nowrap;
+  padding-block: 4px; display: inline-block;
+}
+.top nav a:hover { color: var(--ink); }
+
+/* Hero */
+.hero { padding-block: clamp(36px, 7vw, 84px) clamp(36px, 6vw, 72px); }
+.hero-grid {
+  display: grid; gap: clamp(28px, 5vw, 64px);
+  grid-template-columns: minmax(0, 1fr) minmax(200px, 320px);
+  align-items: end;
+}
+.eyebrow {
+  font-family: var(--display); font-size: 0.875rem; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
+}
+h1 {
+  font-size: clamp(4.25rem, 15vw, 11.5rem);
+  font-weight: 800;
+  font-variation-settings: "wdth" 82;
+  line-height: 0.86;
+  letter-spacing: -0.045em;
+  margin-block: 0.12em 0.2em;
+  margin-left: -0.04em;
+}
+.lede {
+  font-size: clamp(1.35rem, 2.3vw, 1.75rem);
+  line-height: 1.4;
+  max-width: 30em;
+  text-wrap: pretty;
+}
+.portrait { position: relative; justify-self: end; width: 100%; max-width: 320px; }
+.portrait::before {
+  content: ""; position: absolute; inset: 14% -14px -14px 14%;
+  background: var(--mark); border-radius: 6px;
+}
+.portrait img {
+  position: relative; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 20%;
+  border-radius: 6px; border: 1px solid var(--line); background: #FFFFFF;
+}
+
+.facts {
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0 clamp(16px, 3vw, 40px);
+  margin: clamp(36px, 6vw, 64px) 0 0;
+}
+.facts div { border-top: 2px solid var(--ink); padding-top: 12px; }
+.facts dt {
+  font-family: var(--display); font-weight: 700; font-size: clamp(1.9rem, 4vw, 2.75rem);
+  line-height: 1; letter-spacing: -0.03em; font-variant-numeric: tabular-nums;
+}
+.facts dd { margin: 6px 0 0; color: var(--muted); font-size: 1rem; line-height: 1.35; }
+
+/* Sections */
+section { padding-block: clamp(44px, 7vw, 88px); border-top: 1px solid var(--line); }
+.split {
+  display: grid; gap: clamp(18px, 4vw, 56px);
+  grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+}
+h2 {
+  font-size: clamp(1.75rem, 3.2vw, 2.5rem);
+  font-weight: 700; letter-spacing: -0.025em; line-height: 1.05;
+  font-variation-settings: "wdth" 90;
+}
+.split > header p { color: var(--muted); font-size: 1.05rem; margin-top: 10px; max-width: 22em; }
+.prose { display: grid; gap: 1em; max-width: 34em; }
+
+/* Continuum chart */
+.continuum { background: var(--paper); }
+.continuum-head { display: grid; gap: 10px; max-width: 40em; margin-bottom: clamp(24px, 4vw, 40px); }
+.continuum-head p { color: var(--muted); }
+.axis {
+  position: relative; height: 22px;
+  font-family: var(--display); font-size: 0.75rem; font-weight: 500; color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.axis span { position: absolute; top: 0; transform: translateX(-50%); white-space: nowrap; }
+.axis span:first-child { transform: none; }
+.axis span:last-child { transform: translateX(-100%); }
+.bars {
+  display: grid; grid-template-columns: repeat(16, minmax(0, 1fr)); row-gap: 8px;
+  padding-block: 10px;
+  border-inline: 1px solid var(--line);
+  background-image: repeating-linear-gradient(to right, var(--line) 0 1px, transparent 1px calc(100% / 16));
+}
+.bar {
+  height: 46px; display: flex; align-items: center; padding-inline: 12px;
+  font-family: var(--display); font-weight: 700; font-size: 1rem; letter-spacing: 0.02em;
+  border-radius: 4px; transform-origin: left center;
+  animation: grow 0.8s cubic-bezier(.2,.7,.2,1) both;
+}
+.bar.pyp { grid-column: 1 / 10; grid-row: 1; background: var(--mark); color: var(--on-mark); }
+.bar.myp { grid-column: 9 / 14; grid-row: 2; background: var(--accent); color: var(--on-accent); animation-delay: 0.15s; }
+.bar.dp  { grid-column: 14 / 17; grid-row: 3; background: var(--ink); color: var(--paper); animation-delay: 0.3s; }
+@keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+.programmes {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(20px, 3vw, 40px); margin-top: clamp(24px, 4vw, 40px);
+}
+.programmes li { display: grid; gap: 4px; align-content: start; }
+.programmes h3 { font-size: 1.15rem; font-weight: 700; display: flex; align-items: center; gap: 10px; }
+.chip { width: 14px; height: 14px; border-radius: 3px; flex: none; }
+.chip.pyp { background: var(--mark); }
+.chip.myp { background: var(--accent); }
+.chip.dp  { background: var(--ink); }
+.programmes .ages {
+  font-family: var(--display); font-size: 0.875rem; color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.programmes p { font-size: 1.05rem; line-height: 1.45; }
+
+/* Experience */
+.roles { display: grid; gap: clamp(32px, 5vw, 52px); }
+.role { display: grid; gap: 10px; }
+.when {
+  font-family: var(--display); font-size: 0.9rem; font-weight: 600; color: var(--muted);
+  font-variant-numeric: tabular-nums; letter-spacing: 0.01em;
+}
+.role h3 { font-size: clamp(1.3rem, 2.2vw, 1.6rem); font-weight: 700; letter-spacing: -0.015em; line-height: 1.15; }
+.where { color: var(--muted); font-size: 1.05rem; line-height: 1.4; }
+.role ul { display: grid; gap: 0.6em; margin-top: 6px; max-width: 36em; }
+.role li { padding-left: 1.2em; position: relative; }
+.role li::before {
+  content: ""; position: absolute; left: 0; top: 0.62em;
+  width: 0.5em; height: 0.5em; background: var(--mark); border-radius: 2px;
+}
+.also {
+  font-family: var(--display); font-size: 0.95rem; font-weight: 600;
+  display: inline-block; border: 1px solid var(--line); border-radius: 999px; padding: 3px 12px;
+  background: var(--surface); width: fit-content;
+}
+
+/* Practice */
+.practice { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(24px, 4vw, 44px) clamp(24px, 4vw, 48px); }
+.practice li { display: grid; gap: 6px; align-content: start; border-top: 2px solid var(--ink); padding-top: 14px; }
+.practice h3 { font-size: 1.25rem; font-weight: 700; letter-spacing: -0.01em; }
+.practice p { font-size: 1.08rem; line-height: 1.5; }
+
+/* Credentials */
+.cred-groups { display: grid; gap: clamp(28px, 4vw, 44px); }
+.cred-groups h3 {
+  font-size: 0.875rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 4px;
+}
+.cred li {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 24px; align-items: baseline;
+  padding-block: 14px; border-bottom: 1px solid var(--line);
+}
+.cred strong { font-family: var(--display); font-weight: 700; font-size: 1.15rem; letter-spacing: -0.01em; }
+.cred .sub { grid-column: 1; color: var(--muted); font-size: 1.02rem; line-height: 1.4; }
+.cred .when { grid-column: 2; grid-row: 1; text-align: right; white-space: nowrap; }
+
+/* Photo slots and fill-in notes (draft markers, removed as real material arrives) */
+.slot { margin: 0; display: grid; gap: 8px; align-content: start; min-width: 0; }
+.slot-box {
+  aspect-ratio: var(--ar, 4 / 3);
+  border: 2px dashed color-mix(in srgb, var(--muted) 60%, transparent);
+  border-radius: 6px;
+  background:
+    repeating-linear-gradient(135deg, transparent 0 14px, color-mix(in srgb, var(--muted) 14%, transparent) 14px 15px),
+    color-mix(in srgb, var(--ink) 4%, transparent);
+  display: grid; place-content: center; justify-items: center; gap: 8px;
+  text-align: center; padding: 16px;
+  width: 100%; min-width: 0; overflow: hidden;
+}
+.slot-n {
+  font-family: var(--display); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.04em;
+  background: var(--mark); color: var(--on-mark); border-radius: 999px; padding: 3px 12px;
+}
+.slot-what { font-family: var(--display); font-weight: 600; font-size: 0.98rem; line-height: 1.3; max-width: 18em; }
+.slot-hint { font-family: var(--display); font-size: 0.8rem; color: var(--muted); }
+.slot figcaption { font-family: var(--display); font-size: 0.85rem; color: var(--muted); line-height: 1.35; }
+.todo {
+  font-family: var(--display); font-size: 0.92rem; line-height: 1.4;
+  border: 1.5px dashed var(--accent); border-radius: 6px; padding: 10px 14px; max-width: 36em;
+}
+.todo span {
+  display: block; font-weight: 700; font-size: 0.75rem; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--accent); margin-bottom: 2px;
+}
+
+.surface { background: var(--surface); }
+.sec-head { display: grid; gap: 10px; max-width: 40em; margin-bottom: clamp(28px, 5vw, 52px); }
+.sec-head p { color: var(--muted); }
+
+/* Beliefs */
+.beliefs { display: grid; }
+.beliefs li {
+  display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 6fr);
+  gap: 10px clamp(20px, 4vw, 56px); align-items: start;
+  padding-block: clamp(20px, 3vw, 30px); border-top: 2px solid var(--ink);
+}
+.beliefs h3 {
+  font-size: clamp(1.45rem, 2.9vw, 2.15rem); font-weight: 700; line-height: 1.08;
+  letter-spacing: -0.025em; font-variation-settings: "wdth" 88;
+}
+.beliefs p { max-width: 30em; }
+
+/* Class teacher */
+.stack { display: grid; gap: clamp(20px, 3vw, 32px); }
+.shots { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.shots .wide { grid-column: 1 / -1; }
+
+/* Practice rows */
+.pr-rows { display: grid; gap: clamp(36px, 6vw, 72px); }
+.pr-row {
+  display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap: clamp(20px, 4vw, 56px); align-items: center;
+}
+.pr-row:nth-child(even) .slot { order: 2; }
+.pr-text { display: grid; gap: 12px; max-width: 32em; }
+.pr-text h3 { font-size: clamp(1.4rem, 2.6vw, 1.9rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
+.together {
+  margin-top: clamp(36px, 6vw, 72px); border-top: 2px solid var(--ink); padding-top: 18px;
+  display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: 10px clamp(20px, 4vw, 56px);
+}
+.together h3 { font-size: 1.3rem; font-weight: 700; letter-spacing: -0.01em; }
+.together p { max-width: 34em; }
+
+/* Unit case study */
+.unit {
+  border: 2px solid var(--ink); border-radius: 8px; background: var(--paper);
+  padding: clamp(20px, 4vw, 44px); display: grid; gap: clamp(28px, 4vw, 44px);
+  margin-bottom: clamp(36px, 6vw, 72px);
+}
+.unit-row { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(20px, 4vw, 48px); align-items: start; }
+.unit-text { display: grid; gap: 16px; }
+.unit h3 {
+  font-size: clamp(1.9rem, 4.4vw, 3.1rem); font-weight: 800; line-height: 0.98;
+  letter-spacing: -0.035em; font-variation-settings: "wdth" 84;
+}
+.meta { display: flex; flex-wrap: wrap; gap: 8px; }
+.meta li {
+  font-family: var(--display); font-size: 0.85rem; font-weight: 600;
+  border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 3px 12px;
+}
+.central { margin: 0; border-left: 6px solid var(--mark); padding-left: 16px; display: grid; gap: 4px; }
+.central span { font-family: var(--display); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.central p { font-family: var(--display); font-weight: 600; font-size: clamp(1.15rem, 2vw, 1.4rem); line-height: 1.25; letter-spacing: -0.01em; }
+.loi { display: grid; }
+.loi li { border-top: 1px solid var(--line); padding-block: 9px; font-size: 1.05rem; }
+.loi-title { font-family: var(--display); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.journey { display: grid; gap: 0; counter-reset: step; }
+.journey li {
+  counter-increment: step; display: grid; grid-template-columns: 2.2rem minmax(0, 1fr); gap: 4px 14px;
+  border-top: 2px solid var(--ink); padding-block: 14px;
+}
+.journey li::before {
+  content: counter(step); grid-row: 1 / span 2;
+  font-family: var(--display); font-weight: 800; font-size: 1.6rem; line-height: 1; font-variant-numeric: tabular-nums;
+}
+.journey h4 { margin: 0; font-family: var(--display); font-size: 1.15rem; font-weight: 700; letter-spacing: -0.01em; }
+.journey p { grid-column: 2; font-size: 1.05rem; line-height: 1.5; }
+
+/* Families */
+.fam-grid {
+  display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
+  gap: clamp(24px, 4vw, 56px); align-items: start;
+}
+.fam-points { display: grid; gap: 0; margin: 0; }
+.fam-points div { border-top: 1px solid var(--line); padding-block: 14px; display: grid; gap: 2px; }
+.fam-points div:first-child { border-top: 2px solid var(--ink); }
+.fam-points dt { font-family: var(--display); font-weight: 700; font-size: 1.12rem; letter-spacing: -0.01em; }
+.fam-points dd { margin: 0; max-width: 30em; }
+.voices-head { margin-top: clamp(40px, 6vw, 72px); margin-bottom: 20px; display: grid; gap: 6px; max-width: 40em; }
+.voices-head h3 { font-size: clamp(1.4rem, 2.6vw, 1.9rem); font-weight: 700; letter-spacing: -0.02em; }
+.voices-head p { color: var(--muted); font-size: 1.05rem; }
+.voices { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+
+/* Real photos */
+.pic { margin: 0; display: grid; gap: 8px; align-content: start; min-width: 0; }
+.pic img { width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--line); background: var(--surface); }
+.pic.cover img { aspect-ratio: var(--ar, 4 / 3); object-fit: cover; }
+.pic figcaption { font-family: var(--display); font-size: 0.85rem; color: var(--muted); line-height: 1.35; }
+.gallery3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.conf { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.8fr); gap: 16px; margin-top: clamp(28px, 4vw, 44px); }
+.conf-cap { font-family: var(--display); font-size: 0.85rem; color: var(--muted); margin-top: 8px; }
+
+/* A note home: translated exchange */
+.chat { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: clamp(16px, 2.5vw, 24px); display: grid; gap: 12px; }
+.chat-title { font-family: var(--display); font-weight: 700; font-size: 1.05rem; letter-spacing: -0.01em; }
+.chat-note { font-family: var(--display); font-size: 0.8rem; color: var(--muted); line-height: 1.35; }
+.b { max-width: 88%; padding: 10px 14px; border-radius: 14px; font-size: 1rem; line-height: 1.45; display: grid; gap: 2px; }
+.b span { font-family: var(--display); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.b.t { justify-self: end; background: color-mix(in srgb, var(--accent) 13%, var(--surface)); border-bottom-right-radius: 4px; }
+.b.p { justify-self: start; background: var(--paper); border: 1px solid var(--line); border-bottom-left-radius: 4px; }
+
+/* Parent quotes */
+.lead-quote { margin: 0 0 clamp(20px, 3vw, 32px); border-left: 8px solid var(--mark); padding-left: clamp(16px, 2.5vw, 28px); display: grid; gap: 12px; max-width: 46em; }
+.lead-quote p { font-size: clamp(1.3rem, 2.4vw, 1.75rem); line-height: 1.35; text-wrap: pretty; }
+.quotes { columns: 3 260px; column-gap: 16px; }
+.q { break-inside: avoid; margin: 0 0 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 18px 20px; display: grid; gap: 10px; }
+.q p { font-size: 1.08rem; line-height: 1.5; }
+.who { font-family: var(--display); font-size: 0.82rem; font-weight: 600; color: var(--muted); line-height: 1.3; }
+.originals-head { margin: clamp(28px, 4vw, 44px) 0 14px; font-family: var(--display); font-size: 0.875rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.originals { columns: 3 240px; column-gap: 14px; }
+.originals img { width: 100%; height: auto; display: block; margin-bottom: 14px; border-radius: 8px; border: 1px solid var(--line); break-inside: avoid; }
+
+/* Colleagues */
+.colleagues { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: clamp(20px, 4vw, 56px); margin-top: clamp(24px, 4vw, 40px); align-items: start; }
+.colleagues .pic img { max-width: 300px; }
+.colleagues .q { margin: 0; }
+.col-quotes { display: grid; gap: 16px; }
+
+/* Galleries of real photos */
+.gal { columns: 4 200px; column-gap: 12px; }
+.gal img { width: 100%; height: auto; display: block; margin: 0 0 12px; border-radius: 6px; border: 1px solid var(--line); break-inside: avoid; background: var(--surface); }
+.act-group { display: grid; gap: 14px; padding-top: clamp(20px, 3vw, 28px); margin-top: clamp(28px, 4vw, 44px); border-top: 2px solid var(--ink); }
+.act-group:first-of-type { margin-top: 0; }
+.act-head { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: 6px clamp(20px, 4vw, 56px); align-items: baseline; }
+.act-head h3 { font-size: clamp(1.3rem, 2.4vw, 1.7rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
+.act-head p { color: var(--muted); font-size: 1.05rem; max-width: 34em; }
+.small-note { font-family: var(--display); font-size: 0.85rem; color: var(--muted); line-height: 1.4; }
+
+/* Parent messages: original image with its translation */
+.fbs { columns: 3 280px; column-gap: 16px; }
+.fb { break-inside: avoid; margin: 0 0 16px; background: var(--paper); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.fb img { width: 100%; height: auto; display: block; border-bottom: 1px solid var(--line); }
+.fb figcaption { padding: 14px 16px 16px; display: grid; gap: 8px; }
+.fb figcaption p { font-size: 1.02rem; line-height: 1.48; }
+.fb .tr { font-family: var(--display); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.fb .spk { font-family: var(--display); font-weight: 700; font-size: 0.85rem; }
+.pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; align-items: start; }
+.pair .fb { margin: 0; }
+.sub-head { margin: clamp(36px, 6vw, 64px) 0 18px; display: grid; gap: 6px; max-width: 42em; }
+.sub-head h3 { font-size: clamp(1.4rem, 2.6vw, 1.9rem); font-weight: 700; letter-spacing: -0.02em; }
+.sub-head p { color: var(--muted); font-size: 1.05rem; }
+.conf3 { grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.8fr) minmax(0, 0.75fr) minmax(0, 0.8fr); }
+.gallery2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+
+/* More inquiry units */
+.units3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(20px, 3vw, 36px); margin-bottom: clamp(36px, 6vw, 72px); }
+.ucard { border-top: 2px solid var(--ink); padding-top: 16px; display: grid; gap: 14px; align-content: start; }
+.ucard h3 { font-size: clamp(1.3rem, 2.2vw, 1.6rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
+.ucard > p { font-size: 1.05rem; line-height: 1.5; }
+.ucard .central p { font-size: 1.12rem; }
+.ucard .lbl { font-family: var(--display); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 2px; }
+.units-head { font-family: var(--display); font-size: clamp(1.4rem, 2.6vw, 1.9rem); font-weight: 700; letter-spacing: -0.02em; margin: 0 0 20px; }
+
+/* Signature assignments */
+.hws { columns: 3 280px; column-gap: 16px; }
+.hw { break-inside: avoid; margin: 0 0 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.hw img { width: 100%; height: auto; display: block; border-bottom: 1px solid var(--line); }
+.hw figcaption { padding: 14px 16px 16px; display: grid; gap: 4px; }
+.hw h3 { font-size: 1.15rem; font-weight: 700; letter-spacing: -0.01em; }
+.hw p { font-size: 1.02rem; line-height: 1.45; color: var(--muted); }
+
+.room2 { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 9fr); gap: 16px; align-items: start; }
+
+/* One page per section */
+.js [data-view] { display: none; }
+.js [data-view].on { display: block; }
+.js section[data-view] { border-top: 0; }
+.js #about, .js #experience { border-top: 1px solid var(--line); }
+.js section[data-view].on { min-height: 58vh; }
+.js #about.on, .js .explore.on, .js .continuum.on { min-height: 0; }
+main:focus { outline: none; }
+.top nav a[aria-current="page"] { color: var(--ink); font-weight: 700; box-shadow: inset 0 -3px 0 var(--mark); }
+.explore { background: var(--surface); }
+.js .explore { border-top: 1px solid var(--line); }
+.explore h2 { margin-bottom: clamp(20px, 3vw, 32px); }
+.cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(14px, 2vw, 22px); }
+.cards a {
+  display: grid; gap: 6px; height: 100%; align-content: start;
+  padding: 18px 20px 20px; border: 1px solid var(--line); border-top: 3px solid var(--ink); border-radius: 6px;
+  background: var(--paper); color: var(--ink); text-decoration: none;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.cards h3 { font-size: 1.3rem; font-weight: 700; letter-spacing: -0.015em; }
+.cards p { color: var(--muted); font-size: 1.02rem; line-height: 1.4; }
+.cards .go { font-family: var(--display); font-weight: 700; font-size: 1.2rem; margin-top: 4px; }
+.cards a:hover { border-color: var(--accent); border-top-color: var(--accent); transform: translateY(-2px); }
+.cards a:hover .go { color: var(--accent); }
+.pager:empty { display: none; }
+.pager {
+  max-width: 1160px; margin-inline: auto; padding: 22px var(--gutter) clamp(32px, 5vw, 56px);
+  display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); gap: 12px; align-items: stretch;
+}
+.pager a {
+  font-family: var(--display); font-weight: 700; font-size: 1.05rem; color: var(--ink); text-decoration: none;
+  border: 1px solid var(--line); border-radius: 6px; padding: 12px 16px; background: var(--surface);
+  display: grid; gap: 2px; align-content: center;
+}
+.pager a small { font-weight: 500; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.pager a:hover { border-color: var(--accent); color: var(--accent); }
+.pager .next { text-align: right; }
+.pager .home { text-align: center; }
+
+/* Contact */
+.contact { background: var(--ink); color: var(--paper); border-top: 0; }
+.contact h2 { font-size: clamp(2.25rem, 6vw, 4.5rem); font-weight: 800; font-variation-settings: "wdth" 82; letter-spacing: -0.035em; line-height: 0.95; }
+.contact p { max-width: 30em; margin-top: 16px; opacity: 0.85; }
+.mail-row { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 20px; margin-top: clamp(24px, 4vw, 40px); }
+.mail {
+  font-family: var(--display); font-weight: 600; font-size: clamp(1.25rem, 3.4vw, 2rem);
+  color: var(--paper); text-decoration-color: var(--mark); text-decoration-thickness: 3px;
+  overflow-wrap: anywhere;
+}
+.contact a:focus-visible, .contact button:focus-visible { outline-color: var(--mark); }
+.copy {
+  font-family: var(--display); font-size: 0.95rem; font-weight: 700;
+  background: var(--mark); color: var(--on-mark);
+  border: 0; border-radius: 999px; padding: 10px 18px; cursor: pointer;
+}
+.copy:hover { filter: brightness(1.06); }
+footer { background: var(--ink); color: var(--paper); }
+footer .wrap {
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px;
+  padding-block: 22px; border-top: 1px solid color-mix(in srgb, var(--paper) 22%, transparent);
+  font-family: var(--display); font-size: 0.875rem; opacity: 0.8;
+}
+
+/* MYP site additions */
+.practice.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.practice .meta { margin-top: 6px; }
+.tech-rows { margin-top: clamp(40px, 6vw, 72px); }
+.tech-rows .pr-row:nth-child(even) .pic { order: 2; }
+.pr-text .kicker { font-family: var(--display); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.env { max-width: 820px; }
+.lead-in { max-width: 36em; display: grid; gap: 1em; }
+.top nav ul { gap: clamp(8px, 1.05vw, 14px); }
+.top nav a { font-size: 0.875rem; }
+.hws.four { columns: 4 220px; }
+
+@media (max-width: 820px) {
+  .practice.three { grid-template-columns: minmax(0, 1fr); }
+  .tech-rows .pr-row:nth-child(even) .pic { order: 0; }
+  .split { grid-template-columns: minmax(0, 1fr); }
+  .hero-grid { grid-template-columns: minmax(0, 1fr); align-items: start; }
+  .portrait { justify-self: start; max-width: 220px; grid-row: 1; margin-bottom: 8px; }
+  .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 24px; }
+  .programmes { grid-template-columns: minmax(0, 1fr); }
+  .practice { grid-template-columns: minmax(0, 1fr); }
+  .beliefs li, .pr-row, .together, .fam-grid, .unit-row, .colleagues, .act-head, .pair, .units3 { grid-template-columns: minmax(0, 1fr); }
+  .pr-row:nth-child(even) .slot { order: 0; }
+  .voices { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 520px) {
+  body { font-size: 1.125rem; }
+  .cred li { grid-template-columns: minmax(0, 1fr); }
+  .cred .when { grid-column: 1; grid-row: auto; text-align: left; }
+  .bar { padding-inline: 8px; font-size: 0.9rem; }
+  .shots, .gallery3, .room2 { grid-template-columns: minmax(0, 1fr); }
+  .gal { columns: 2 140px; }
+  .conf3 { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .b { max-width: 96%; }
+  .slot-what { font-size: 0.88rem; }
+  .slot-box { padding: 10px; }
+  .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .cards a { padding: 14px 14px 16px; }
+  .cards h3 { font-size: 1.12rem; }
+  .cards p { font-size: 0.95rem; }
+  .pager { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .pager .home { grid-column: 1 / -1; grid-row: 2; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  mark, .bar { animation: none; }
+  .totop, .cards a { transition: none; }
+}
+</style>
+</head>
+<body>
+<a class="skip" id="skip" href="#top">Skip to content</a>
+
+<div class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">Kirk Shi</a>
+    <nav aria-label="Sections">
+      <ul>
+        <li><a href="#top">Home</a></li>
+        <li><a href="#philosophy">Philosophy</a></li>
+        <li><a href="#myp">MYP Teaching</a></li>
+        <li><a href="#technology">Technology</a></li>
+        <li><a href="#practice">Inquiry Units</a></li>
+        <li><a href="#assignments">Assignments</a></li>
+        <li><a href="#activities">Activities</a></li>
+        <li><a href="#families">Families</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#credentials">Credentials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<main id="top" tabindex="-1">
+  <div class="hero" data-view="home">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow">MYP Language Acquisition (English) Teacher · ESL/EAL Specialist</p>
+          <h1>Kirk Shi</h1>
+          <p class="lede">I teach <mark>MYP Language Acquisition and DP English B</mark> at a fully authorised IB World School, and I have taught English to additional-language learners for seven years. I hold the Cambridge CELTA, and I <mark>bring AI tools into my lessons</mark> so that every student gets more speaking and writing practice.</p>
+        </div>
+        <div class="portrait">
+          <img src="data:image/jpeg;base64,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" alt="Portrait of Kirk Shi" width="560" height="560">
+        </div>
+      </div>
+
+      <dl class="facts">
+        <div><dt>7</dt><dd>years of ESL/EAL teaching, 5 of them in international school settings</dd></div>
+        <div><dt>3</dt><dd>IB programmes: teaching MYP and DP, certified in PYP</dd></div>
+        <div><dt>8</dt><dd>IELTS band in English, alongside native Mandarin</dd></div>
+        <div><dt>10</dt><dd>teachers mentored as English Department Co-Lead, 2022–2024</dd></div>
+      </dl>
+    </div>
+  </div>
+
+  <section class="explore" data-view="home" aria-labelledby="explore-title">
+    <div class="wrap">
+      <h2 id="explore-title">Explore</h2>
+      <ul class="cards">
+        <li><a href="#philosophy"><h3>Philosophy</h3><p>Four ideas behind how I teach.</p><span class="go" aria-hidden="true">→</span></a></li>
+        <li><a href="#myp"><h3>MYP Teaching</h3><p>Planning, phases, assessment and student work.</p><span class="go" aria-hidden="true">→</span></a></li>
+        <li><a href="#technology"><h3>Technology</h3><p>How I use AI to prepare, practise and diagnose.</p><span class="go" aria-hidden="true">→</span></a></li>
+        <li><a href="#practice"><h3>Inquiry Units</h3><p>Units I designed on the PYP framework.</p><span class="go" aria-hidden="true">→</span></a></li>
+        <li><a href="#assignments"><h3>Assignments</h3><p>Creative homework in English.</p><span class="go" aria-hidden="true">→</span></a></li>
+        <li><a href="#activities"><h3>Activities</h3><p>English Day, public speaking and school events.</p><span class="go" aria-hidden="true">→</span></a></li>
+        <li><a href="#families"><h3>Families</h3><p>Homeroom care, and what parents say.</p><span class="go" aria-hidden="true">→</span></a></li>
+        <li><a href="#experience"><h3>Experience</h3><p>IB programmes and teaching roles.</p><span class="go" aria-hidden="true">→</span></a></li>
+        <li><a href="#credentials"><h3>Credentials</h3><p>Education, qualifications and languages.</p><span class="go" aria-hidden="true">→</span></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="about" data-view="home" aria-labelledby="about-title">
+    <div class="wrap split">
+      <header><h2 id="about-title">About</h2></header>
+      <div class="prose">
+        <p>I am an English language acquisition teacher with seven years of ESL/EAL teaching experience, five of them in international school settings.</p>
+        <p>I teach MYP Language Acquisition (English) and DP English B at Guangzhou Zhongshan Whampoa School for Hong Kong and Macao Students, a fully authorised IB World School. I plan units around MYP concepts and global contexts, teach to each student's phase, and assess against the Language Acquisition criteria.</p>
+        <p>Before that I spent five years at Future Leadership Academy in Hainan, teaching English to additional-language learners from Grade 1 to Grade 8. From 2022 to 2024 I was also a Homeroom Teacher there, and I co-led the English Department with the school's Foreign Lead.</p>
+        <p>I hold the Cambridge CELTA and the IB Certificate in Teaching and Learning (PYP), and I am completing a Master of Education at Zhejiang University.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="philosophy" data-view="philosophy" class="surface" aria-labelledby="philosophy-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="philosophy-title">What I believe</h2>
+        <p>Four ideas that shape how I plan a unit, run a class and support a student.</p>
+      </div>
+      <ul class="beliefs">
+        <li>
+          <h3>Students learn a language by using it to find things out.</h3>
+          <p>That is why I plan English around inquiry. Reading, writing and talk have a purpose when they serve a question the class cares about.</p>
+        </li>
+        <li>
+          <h3>Every student needs a way in.</h3>
+          <p>A class always holds a range of phases and proficiency. I plan scaffolding and extension in advance, so each student can take part first and then be stretched.</p>
+        </li>
+        <li>
+          <h3>Assessment is information for the next lesson.</h3>
+          <p>Formative checks tell me what to teach next. Summative tasks show students where they stand against clear criteria. I use both to decide what happens afterwards.</p>
+        </li>
+        <li>
+          <h3>Students speak up when they feel safe and known.</h3>
+          <p>Speaking a new language in front of classmates takes courage. I build a class where mistakes are expected, and I get to know each student well enough to judge when to push.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="myp" data-view="myp" aria-labelledby="myp-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="myp-title">In the MYP classroom</h2>
+        <p>MYP Language Acquisition (English) and DP English B at Guangzhou Zhongshan Whampoa School for Hong Kong and Macao Students, a fully authorised IB World School.</p>
+      </div>
+
+      <ul class="practice">
+        <li>
+          <h3>Planning units</h3>
+          <p>I plan each unit with department colleagues around MYP concepts, a global context and a statement of inquiry, so that the language work serves a question worth exploring.</p>
+        </li>
+        <li>
+          <h3>Teaching by phase</h3>
+          <p>Students in one class work at different MYP phases. I adapt texts, tasks and scaffolding to each phase, so that every student meets the right level of challenge and can see a next step.</p>
+        </li>
+        <li>
+          <h3>Formative assessment</h3>
+          <p>Quizzes, exit tickets, oral conferencing, drafts with written feedback, and peer and self-assessment show me how each student is progressing. I adjust the lessons that follow.</p>
+        </li>
+        <li>
+          <h3>Summative assessment</h3>
+          <p>I design and mark summative tasks against the four Language Acquisition criteria, and use the results to report progress and plan next steps.</p>
+          <ul class="meta"><li>A · Listening</li><li>B · Reading</li><li>C · Speaking</li><li>D · Writing</li></ul>
+        </li>
+        <li>
+          <h3>The Language Acquisition outline</h3>
+          <p>I reviewed and updated the school's Language Acquisition outline so that it reflects the needs and proficiency profile of our students.</p>
+        </li>
+        <li>
+          <h3>Tutorials</h3>
+          <p>I run tutorials for students who need additional support, guided by what assessment has shown about each of them.</p>
+        </li>
+      </ul>
+
+      <div class="sub-head">
+        <h3>Student work</h3>
+        <p>Posters and writing from my MYP English classes.</p>
+      </div>
+      <div class="hws four">
+        <figure class="hw"><img src="myp-megacities.jpg" alt="A hand-made poster titled Megacities with handwritten sections on London, Shanghai and Beijing, photos of each city and drawn skylines" width="1400" height="1802" loading="lazy"><figcaption><h3>Megacities</h3><p>A group poster comparing London, Shanghai and Beijing: population, universities, transport, food, and why people move to big cities.</p></figcaption></figure>
+        <figure class="hw"><img src="myp-familyconflict.jpg" alt="A red, black and white poster titled Family Conflict with handwritten sections headed What, Effects and How, and an ink drawing of two people arguing" width="1400" height="1829" loading="lazy"><figcaption><h3>Family conflict</h3><p>A poster on conflict between teenagers and parents, set out under three questions: what it is, what its effects are, and how to resolve it.</p></figcaption></figure>
+        <figure class="hw"><img src="myp-letter.jpg" alt="A handwritten formal email on lined paper headed Letter, with From, To and Subject lines and the greeting Dear Mr. Johnson" width="1400" height="1849" loading="lazy"><figcaption><h3>A job application</h3><p>A formal email applying for a Junior Digital Marketing Assistant post, written by a Grade 9 student. The student's email address is covered.</p></figcaption></figure>
+        <figure class="hw"><img src="myp-springfestival.jpg" alt="A hand-drawn poster titled Spring Festival with two tables of handwritten notes and drawings of a lantern, dumplings, a lion dance and firecrackers" width="1400" height="1279" loading="lazy"><figcaption><h3>Spring Festival</h3><p>A fact file on the Spring Festival: when it falls, how families prepare, what people do, eat and wear, and how the writer feels about it.</p></figcaption></figure>
+      </div>
+
+      <div class="together">
+        <h3>DP English B</h3>
+        <p>I also teach DP English B at the same school. Teaching both programmes lets me plan MYP Language Acquisition with the next stage in view.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="technology" data-view="technology" class="surface" aria-labelledby="technology-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="technology-title">Technology integration</h2>
+        <p>How I use AI tools to prepare lessons, to give every student more speaking and writing practice, and to see where each student is.</p>
+      </div>
+
+      <ul class="practice">
+        <li>
+          <h3>Preparing lessons</h3>
+          <p>I use AI to draft texts at different levels for different MYP phases, to generate question sets and model answers, and to build interactive materials. I check and edit everything before it reaches students.</p>
+        </li>
+        <li>
+          <h3>Speaking practice in class</h3>
+          <p>Students talk with an AI speaking partner set up for the unit's context. Everyone speaks at once, so each student gets minutes of individual practice that a whole-class discussion cannot give.</p>
+        </li>
+        <li>
+          <h3>Speaking and writing practice after class</h3>
+          <p>Between lessons, students rehearse a talk or draft a piece of writing with AI, get feedback against the task's success criteria and revise. They keep the first draft, so I can see what changed.</p>
+        </li>
+        <li>
+          <h3>Diagnosing English level</h3>
+          <p>I use AI tools to help diagnose each student's English from short speaking and writing samples. Together with my own assessment, this shows me which tasks and which tutorial support each student needs.</p>
+        </li>
+      </ul>
+
+      <div class="pr-rows tech-rows">
+        <div class="pr-row">
+          <figure class="pic"><img src="tech-speaking.jpg" alt="Screenshot of an AI character named Alex standing on a school sports field, with a chat in English beside him" width="1206" height="679" loading="lazy"></figure>
+          <div class="pr-text">
+            <p class="kicker">In my lessons</p>
+            <h3>An AI speaking partner</h3>
+            <p>“Alex”, an AI sports ambassador, invites the student to the school Sports Day and keeps the conversation going with follow-up questions. The student answers by voice.</p>
+          </div>
+        </div>
+        <div class="pr-row">
+          <figure class="pic"><img src="tech-campus3d.jpg" alt="Screenshot of an interactive 3D model of a school campus with eight labelled places and a word list in English and Chinese" width="1400" height="748" loading="lazy"></figure>
+          <div class="pr-text">
+            <p class="kicker">In my lessons</p>
+            <h3>An interactive 3D campus</h3>
+            <p>I built this with AI for a Grade 7 lesson, “My School”. Students click a building to hear its name, then move on to prepositions of place, “there is” and “there are”, a listening hunt, and introducing the campus in their own words.</p>
+          </div>
+        </div>
+        <div class="pr-row">
+          <figure class="pic"><img src="tech-presenter.jpg" alt="Video frame of an animated engraving of Jean Anthelme Brillat-Savarin beside his quotation, with an English subtitle" width="1206" height="648" loading="lazy"></figure>
+          <div class="pr-text">
+            <p class="kicker">In my lessons</p>
+            <h3>An AI presenter to open a lesson</h3>
+            <p>To open a lesson on food, an AI-animated Jean Anthelme Brillat-Savarin introduces himself and his line, “Tell me what you eat, and I will tell you what you are.”</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-head">
+        <h3>From an AI image to a student's own work</h3>
+        <p>An AI-generated picture of a house made of grapes, and one student's painted version of it.</p>
+      </div>
+      <div class="gallery2" style="max-width: 760px">
+        <figure class="pic"><img src="tech-grape-ai.jpg" alt="An AI-generated picture of a small house built from a bunch of purple grapes on a grassy hill" width="1000" height="1183" loading="lazy"><figcaption>The AI-generated picture.</figcaption></figure>
+        <figure class="pic"><img src="tech-grape-student.jpg" alt="A child&#x27;s painting of the same grape house, with a stone path and blue clouds" width="1000" height="1188" loading="lazy"><figcaption>A student's painting.</figcaption></figure>
+      </div>
+
+      <div class="together">
+        <h3>Ground rules</h3>
+        <p>I check and edit AI-generated material before students see it. Students keep their drafts, so their own thinking stays visible. AI feedback and AI diagnosis inform my judgement and do not replace it.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="practice" data-view="practice" aria-labelledby="practice-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="practice-title">Inquiry units</h2>
+        <p>Units I designed on the IB PYP framework for my primary classes at Future Leadership Academy, where I taught from 2021 to 2026.</p>
+      </div>
+
+      <article class="unit" aria-labelledby="unit-title">
+        <div class="unit-row">
+          <div class="unit-text">
+            <p class="eyebrow">An inquiry unit up close</p>
+            <h3 id="unit-title">Coastal Erosion Protection</h3>
+            <ul class="meta">
+              <li>Grades 4–5</li>
+              <li>6 weeks</li>
+              <li>Theme: Sharing the Planet</li>
+              <li>Hainan, China</li>
+            </ul>
+            <p>Our school stood beside the sea, so I built this unit around the shoreline and took my students there. I designed it on the PYP framework, with a transdisciplinary theme, a central idea and lines of inquiry.</p>
+            <blockquote class="central">
+              <span>Central idea</span>
+              <p>Human actions can both threaten and protect the natural environment.</p>
+            </blockquote>
+            <div>
+              <p class="loi-title">Lines of inquiry</p>
+              <ul class="loi">
+                <li>The causes of coastal erosion</li>
+                <li>The impact on local communities</li>
+                <li>Solutions and actions we can take</li>
+              </ul>
+            </div>
+          </div>
+          <ol class="journey">
+            <li>
+              <h4>On the shore</h4>
+              <p>The unit opened with a field visit to the nearby coast. Students described what they saw in English and came back with their own questions to investigate.</p>
+            </li>
+            <li>
+              <h4>Three ways to show learning</h4>
+              <p>Students chose how to present their findings: a research report, an interview video or a bilingual poster.</p>
+            </li>
+            <li>
+              <h4>Save Our Coast</h4>
+              <p>Students organised a “Save Our Coast” campaign and shared what they had learned with the rest of the school and with their parents.</p>
+            </li>
+          </ol>
+        </div>
+      </article>
+
+      <h3 class="units-head">More inquiry units</h3>
+      <div class="units3">
+        <article class="ucard">
+          <h3>The Boy Who Cried Wolf</h3>
+          <ul class="meta"><li>Grade 2</li><li>Key concept: perspective</li></ul>
+          <p>A textbook fable, reshaped into a small inquiry into truth and trust.</p>
+          <blockquote class="central"><span>Central idea</span><p>Our choices affect the trust others have in us.</p></blockquote>
+          <div><p class="loi-title">Lines of inquiry</p><ul class="loi"><li>What trust is</li><li>How trust is built and broken</li><li>What happens when trust is lost</li></ul></div>
+          <p><span class="lbl">In the unit</span>Students retell the story from the villagers' point of view and from the wolf's, then collect examples from their own lives of trust being built or broken.</p>
+          <p><span class="lbl">Action</span>The class writes a trust pledge together.</p>
+        </article>
+        <article class="ucard">
+          <h3>Rama and Sita</h3>
+          <ul class="meta"><li>Grade 3</li><li>Key concepts: perspective, connection</li></ul>
+          <p>A cultural reading taught around Diwali, built into a unit on stories and values.</p>
+          <blockquote class="central"><span>Central idea</span><p>Stories carry the values of the communities that tell them.</p></blockquote>
+          <div><p class="loi-title">Lines of inquiry</p><ul class="loi"><li>The story itself</li><li>The values it expresses</li><li>How the same story is told across cultures and time</li></ul></div>
+          <p><span class="lbl">In the unit</span>Students compare the Indian Ramayana with Thai, Indonesian and Cambodian tellings, working mainly from images, then look for the values carried by stories in their own families.</p>
+          <p><span class="lbl">Action</span>Each student writes a short story or records an oral story from a grandparent.</p>
+        </article>
+        <article class="ucard">
+          <h3>Plants</h3>
+          <ul class="meta"><li>Key concept: connection</li></ul>
+          <p>A plants topic turned from describing plants into investigating relationships.</p>
+          <blockquote class="central"><span>Central idea</span><p>Living things and their environments depend on each other.</p></blockquote>
+          <div><p class="loi-title">Lines of inquiry</p><ul class="loi"><li>What plants need</li><li>How plants and animals depend on each other</li><li>How humans affect plant environments</li></ul></div>
+          <p><span class="lbl">In the unit</span>Students grow bean plants and investigate the trees on the school campus, asking why some are healthier than others.</p>
+          <p><span class="lbl">Action</span>The class makes a campus map showing which trees need more care and proposes how to help.</p>
+        </article>
+      </div>
+
+      <div class="pr-rows">
+        <div class="pr-row">
+          <figure class="pic"><img src="act-b8.jpg" alt="Kirk Shi teaching at the front of a classroom, pointing to a reading text on a screen" width="842" height="558" loading="lazy"></figure>
+          <div class="pr-text">
+            <h3>Differentiation</h3>
+            <p>I plan for different levels of readiness and English proficiency through differentiation, scaffolding and extension. The aim is for every student to participate with confidence and become a more independent learner.</p>
+          </div>
+        </div>
+        <div class="pr-row">
+          <figure class="pic"><img src="student-map.jpg" alt="Student-made concept map with branches for family, culture and education" width="900" height="619" loading="lazy"></figure>
+          <div class="pr-text">
+            <h3>Evidence of learning</h3>
+            <p>Formative assessment, classroom observation, learning journals and student reflection show me how each student is progressing. I use them to document learning and to adjust the teaching and support that follow.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="together">
+        <h3>Working in partnership</h3>
+        <p>From 2022 to 2024 I co-led the English Department as its Chinese Lead, alongside the Foreign Lead. I contributed to curriculum development and differentiated English programmes across grade levels, and mentored 10 teachers through lesson observations, collaborative planning and instructional coaching.</p>
+      </div>
+      <div class="colleagues">
+        <div class="gallery2">
+          <figure class="pic"><img src="note-2022.jpg" alt="Handwritten note dated November 2022, addressed to KK" width="588" height="768" loading="lazy"><figcaption>Handwritten note from a colleague, November 2022.</figcaption></figure>
+          <figure class="pic"><img src="note-messages.jpg" alt="Four chat messages in English from a colleague" width="588" height="618" loading="lazy"><figcaption>Messages from a colleague.</figcaption></figure>
+          <figure class="pic"><img src="note-heykk.jpg" alt="A longer chat message in English beginning Hey KK" width="588" height="786" loading="lazy"><figcaption>A message from a colleague.</figcaption></figure>
+          <figure class="pic"><img src="note-card.jpg" alt="A handwritten card addressed Dear KK, dated July 2022" width="588" height="452" loading="lazy"><figcaption>A handwritten card I received, July 2022.</figcaption></figure>
+        </div>
+        <div class="col-quotes">
+          <blockquote class="q">
+            <p>I want to let you know that I not only appreciate the efforts that you put forth for the department, but also for the individual support you provided recently. We are lucky to have someone with such great spirit &amp; dedication.</p>
+            <span class="who">From the note, November 2022</span>
+          </blockquote>
+          <blockquote class="q">
+            <p>You're this cool, fun person but you're also so professional and calm and determined. You are perfectly suited to this job and I really enjoy working with you.</p>
+            <span class="who">From the messages</span>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="assignments" data-view="assignments" class="surface" aria-labelledby="assignments-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="assignments-title">Signature assignments</h2>
+        <p>Creative homework from my primary classes, in which students use English to make something: a book, a cube, a menu, a comic.</p>
+      </div>
+      <div class="hws">
+        <figure class="hw"><img src="hw-autumn.jpg" alt="Two paper envelopes labelled Autumn filled with coloured paper leaves and mushrooms" width="1000" height="578" loading="lazy"><figcaption><h3>Autumn envelopes</h3><p>Cut-out leaves and mushrooms in an envelope, with a simile: “The leaves flutter down like a shower of golden rain.”</p></figcaption></figure>
+        <figure class="hw"><img src="hw-feelings.jpg" alt="An open handmade book with two blue characters labelled sad and nervous" width="1000" height="949" loading="lazy"><figcaption><h3>A book of feelings</h3><p>A handmade book naming a feeling and a way to cope: “When I feel nervous, I want to hide. I can take slow breaths.”</p></figcaption></figure>
+        <figure class="hw"><img src="hw-seasons.jpg" alt="Four hand-painted bookmarks with tassels, one for each season" width="1000" height="1117" loading="lazy"><figcaption><h3>Four seasons bookmarks</h3><p>Four illustrated bookmarks, each with a sentence about spring, summer, autumn or winter.</p></figcaption></figure>
+        <figure class="hw"><img src="hw-friendship.jpg" alt="Leaves with handwriting on them, one spelling FRIEND as an acrostic" width="1000" height="745" loading="lazy"><figcaption><h3>Friendship leaves</h3><p>Writing about friendship on real leaves, including an acrostic of the word FRIEND.</p></figcaption></figure>
+        <figure class="hw"><img src="hw-leaf.jpg" alt="A dried maple leaf with three short sentences written on it in red" width="1000" height="1061" loading="lazy"><figcaption><h3>A leaf to keep</h3><p>“Start where you are. Use what you have. Do what you can.”</p></figcaption></figure>
+        <figure class="hw"><img src="hw-comic.jpg" alt="A six-panel pencil comic strip with speech bubbles in English" width="1000" height="1115" loading="lazy"><figcaption><h3>Comic strip</h3><p>A six-panel comic in English in which a robot and a person argue about what art is.</p></figcaption></figure>
+        <figure class="hw"><img src="hw-wordtree.jpg" alt="A paper tree whose blossoms each carry an English word" width="1000" height="1266" loading="lazy"><figcaption><h3>Vocabulary tree</h3><p>A tree in blossom, with a word on every petal: months, ordinal numbers, possessive pronouns and places.</p></figcaption></figure>
+        <figure class="hw"><img src="hw-plates.jpg" alt="Paper plates with clay models of festival foods, labelled in English and Chinese" width="1000" height="1241" loading="lazy"><figcaption><h3>Festival food plates</h3><p>Clay models of festival foods on paper plates, labelled in English and Chinese: zongzi for the Dragon Boat Festival, mooncakes for Mid-Autumn, jiaozi for the Winter Solstice.</p></figcaption></figure>
+        <figure class="hw"><img src="hw-animalbook1.jpg" alt="A handmade kraft-paper book standing open, with animal drawings and handwritten sentences" width="1000" height="928" loading="lazy"><img src="hw-animalbook2.jpg" alt="An open spread of the animal book showing an elephant and a giraffe" width="1000" height="712" loading="lazy"><figcaption><h3>Animal book</h3><p>A handmade book with an animal and a short description on each page: “What's this? It's an elephant. It has a long nose and big ears.”</p></figcaption></figure>
+        <figure class="hw"><img src="hw-bestfriend.jpg" alt="Four photos of small handmade books titled My best friend, with drawings and sentences" width="1000" height="985" loading="lazy"><figcaption><h3>My best friend</h3><p>Mini-books describing a friend: “She is lovely and friendly, helpful and nice, clever and tall.”</p></figcaption></figure>
+        <figure class="hw"><img src="hw-cube.jpg" alt="A hand-held cardboard cube with a winter scene on one face and a spring scene on another" width="1000" height="937" loading="lazy"><figcaption><h3>Seasons cube</h3><p>A cube with a season on each face and a sentence to go with it: “Winter is cold. We play in the snow.”</p></figcaption></figure>
+        <figure class="hw"><img src="hw-lapbook.jpg" alt="A green fold-out board titled Seasons with a wheel, a wardrobe booklet, travel cards and a tree" width="1000" height="757" loading="lazy"><figcaption><h3>Seasons lapbook</h3><p>A fold-out project on the seasons: a wheel asking “Which season do you like?”, a wardrobe, travel cards and a tree in four seasons.</p></figcaption></figure>
+        <figure class="hw"><img src="hw-menu.jpg" alt="A hand-drawn restaurant menu with hot dishes, cold dishes and prices" width="673" height="882" loading="lazy"><figcaption><h3>Themed menu</h3><p>A hand-drawn menu of hot and cold dishes with prices, on a Harry Potter theme.</p></figcaption></figure>
+        <figure class="hw"><img src="hw-alphabet.jpg" alt="A sheet titled Amazing Alphabet with a flap for each letter drawn as a monster" width="1000" height="1172" loading="lazy"><figcaption><h3>Amazing Alphabet</h3><p>A lift-the-flap alphabet in which every letter is a monster with a word underneath.</p></figcaption></figure>
+        <figure class="hw"><img src="hw-watches.jpg" alt="Paper strips shaped like watches, one per letter, some coloured in, with scissors and pens" width="1000" height="1331" loading="lazy"><figcaption><h3>Phonics watches</h3><p>Printable paper watches to colour, cut out and wear, one for each letter with words that begin with it.</p></figcaption></figure>
+        <figure class="hw"><img src="hw-food.jpg" alt="Clay models of food arranged on a circle divided into labelled food groups" width="1000" height="740" loading="lazy"><figcaption><h3>Food groups</h3><p>Clay food sorted and labelled by group, including grain and protein.</p></figcaption></figure>
+        <figure class="hw"><img src="hw-colourbook.jpg" alt="The cover of a handmade book titled Colour book with layered rainbow paper" width="1000" height="1196" loading="lazy"><figcaption><h3>Colour book</h3><p>The cover of a handmade book of colours, built from layers of coloured paper.</p></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="activities" data-view="activities" aria-labelledby="activities-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="activities-title">Activities</h2>
+        <p>Co-curricular work at my current school, and events with my students at Future Leadership Academy.</p>
+      </div>
+
+      <div class="act-group">
+        <div class="act-head"><h3>At my current school</h3><p>Guangzhou Zhongshan Whampoa School for Hong Kong and Macao Students, since August 2026.</p></div>
+        <ul class="practice three">
+          <li>
+            <h3>English Day</h3>
+            <p>I organised the school's English Day.</p>
+          </li>
+          <li>
+            <h3>English Public Speaking Club</h3>
+            <p>I lead the English Public Speaking Club as an extra-curricular activity (ECA).</p>
+          </li>
+          <li>
+            <h3>Tutorials</h3>
+            <p>I run tutorials for students who need additional support in English.</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="act-group">
+        <div class="act-head"><h3>Echoes of English, 2024</h3><p>The 2024 FLA English Festival &amp; Children's Day Showcase, which I hosted on stage.</p></div>
+        <div class="gal">
+          <img src="act-showcase-host.jpg" alt="Kirk Shi alone on stage with a microphone in front of the Echoes of English title screen, audience in the foreground" width="1200" height="800" loading="lazy">
+          <img src="act-showcase-finale.jpg" alt="The stage filled with children waving at the end of the showcase" width="1200" height="800" loading="lazy">
+          <img src="act-showcase-team.jpg" alt="Eleven teachers lined up on stage holding flowers after the showcase" width="1200" height="800" loading="lazy">
+          <img src="act-students-stage.jpg" alt="Two students speaking into microphones on stage" width="1100" height="734" loading="lazy">
+        </div>
+      </div>
+
+      <div class="act-group">
+        <div class="act-head"><h3>On stage</h3><p>Hosting and presenting at school events, including the FLA 5th anniversary.</p></div>
+        <div class="gal">
+          <img src="act-a2.jpg" alt="Kirk Shi holding a microphone in front of an FLA 5th Anniversary backdrop" width="758" height="484" loading="lazy">
+          <img src="act-a3.jpg" alt="Kirk Shi and a co-host on stage, each holding a script folder" width="758" height="714" loading="lazy">
+          <img src="act-b2.jpg" alt="Kirk Shi and a co-host reading from folders with microphones" width="842" height="560" loading="lazy">
+          <img src="act-a5.jpg" alt="Kirk Shi and a co-host on stage in front of a storybook backdrop" width="758" height="516" loading="lazy">
+          <img src="act-b1.jpg" alt="Kirk Shi and a co-host on stage, seen from the back of the hall" width="842" height="560" loading="lazy">
+          <img src="act-a6.jpg" alt="Kirk Shi and a colleague on stage with two young students" width="758" height="504" loading="lazy">
+          <img src="act-a1.jpg" alt="Kirk Shi standing beside a speaker at a podium" width="758" height="708" loading="lazy">
+          <img src="act-a4.jpg" alt="Kirk Shi holding a microphone beside a colleague who is presenting" width="758" height="718" loading="lazy">
+          <img src="act-recital.jpg" alt="A stage with a poem projected on a large blue screen" width="588" height="448" loading="lazy">
+        </div>
+      </div>
+
+      <div class="act-group">
+        <div class="act-head"><h3>Reading and awards</h3><p>Certificates and prizes in the school library and on stage, including the 2022 FLA English Reading Marathon.</p></div>
+        <div class="gal">
+          <img src="act-b3.jpg" alt="Kirk Shi and a colleague with three students holding certificates in the library" width="842" height="666" loading="lazy">
+          <img src="act-b6.jpg" alt="A group of students holding books and prizes in the library with two teachers" width="842" height="560" loading="lazy">
+          <img src="act-b4.jpg" alt="Kirk Shi with two students holding a prize in the library" width="842" height="560" loading="lazy">
+          <img src="act-b9.jpg" alt="Students lined up on stage in front of a slide about the English Reading Marathon" width="842" height="568" loading="lazy">
+          <img src="act-b5.jpg" alt="Kirk Shi and a colleague applauding at a table in the library" width="842" height="560" loading="lazy">
+          <img src="act-b7.jpg" alt="Kirk Shi speaking in the library" width="842" height="560" loading="lazy">
+        </div>
+      </div>
+
+      <div class="act-group">
+        <div class="act-head"><h3>Halloween</h3><p>Costumes, a class game and medals.</p></div>
+        <div class="gal">
+          <img src="act-halloween.jpg" alt="Kirk Shi in costume with three students at an outdoor Halloween event" width="900" height="877" loading="lazy">
+          <img src="act-c4.jpg" alt="Masked students posing in a classroom in front of a How To Play slide" width="1068" height="802" loading="lazy">
+          <img src="act-costumes.jpg" alt="Kirk Shi with two students in costume in the library" width="1000" height="694" loading="lazy">
+          <img src="act-c5.jpg" alt="Kirk Shi with pumpkin hair clips, with two students at a classroom desk" width="1068" height="800" loading="lazy">
+          <img src="act-medals.jpg" alt="Two students wearing medals on stage with Kirk Shi and another teacher" width="900" height="893" loading="lazy">
+          <img src="act-c3.jpg" alt="Kirk Shi with Halloween face paint, with two students" width="1068" height="1420" loading="lazy">
+        </div>
+      </div>
+
+      <div class="act-group">
+        <div class="act-head"><h3>In class and with colleagues</h3><p>Lessons, students outdoors and the teaching team.</p></div>
+        <div class="gal">
+          <img src="act-b8.jpg" alt="Kirk Shi teaching at the front of a classroom, pointing to a reading text on a screen" width="842" height="558" loading="lazy">
+          <img src="act-a7.jpg" alt="A student reading aloud at the front of a classroom while Kirk Shi takes notes" width="758" height="464" loading="lazy">
+          <img src="act-c1.jpg" alt="Students sitting together on a lawn" width="1068" height="708" loading="lazy">
+          <img src="act-a8.jpg" alt="A group of teachers posing on stage" width="758" height="496" loading="lazy">
+          <img src="act-a9.jpg" alt="Kirk Shi with two colleagues outdoors" width="758" height="506" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="families" data-view="families" class="surface" aria-labelledby="families-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="families-title">Homeroom and families</h2>
+        <p>From 2022 to 2024 I was also a Homeroom Teacher at Future Leadership Academy, responsible for my students' wellbeing and for working with their families.</p>
+      </div>
+      <div class="lead-in">
+        <p>As Homeroom Teacher I held day-to-day responsibility for my students' learning, wellbeing, behaviour and class community.</p>
+        <p>I worked to make the classroom caring and respectful. The class earned “Star Class” recognition, and I received School Outstanding Teacher recognition.</p>
+      </div>
+
+      <div class="sub-head">
+        <h3>The classroom environment</h3>
+      </div>
+      <div class="stack env">
+      <figure class="pic"><img src="room-firstday.jpg" alt="A classroom with a balloon on every desk, stacks of new books, bunting and a banner for the start of term" width="1200" height="800" loading="lazy"><figcaption>The first day of term: a balloon and new books on every desk, under a banner that reads “School starts!”</figcaption></figure>
+      <figure class="pic"><img src="room-wall.jpg" alt="A classroom display wall with numbered calm-down steps in English, quotations in English and Chinese, and a reading display" width="1200" height="800" loading="lazy"><figcaption>The display wall. In the centre are six steps for calming down, in English, from “Take a few slow, deep breaths” to “Talk to a friend, teacher or parent”. Beside them are quotations in English and Chinese.</figcaption></figure>
+      <div class="room2">
+        <figure class="pic"><img src="room-readingbar.jpg" alt="White shelves of children&#x27;s books under a sign reading Reading Bar in Chinese" width="800" height="1200" loading="lazy"><figcaption>The class library, the “Reading Bar”.</figcaption></figure>
+        <figure class="pic"><img src="room-readingarea.jpg" alt="A wooden bookshelf with books and flowers beside a sign listing reading-area rules in Chinese" width="1100" height="733" loading="lazy"><figcaption>The reading area and its rules: read quietly, look after the books, think, protect your eyes, put books back.</figcaption></figure>
+      </div>
+      <div class="gallery2">
+        <figure class="pic cover" style="--ar: 6 / 5"><img src="wall-communicator.jpg" alt="Hand-lettered classroom poster headed Communicator, with key words circled in red" width="800" height="669" loading="lazy"></figure>
+        <figure class="pic cover" style="--ar: 6 / 5"><img src="wall-openminded.jpg" alt="Hand-lettered classroom poster headed Open-minded" width="800" height="674" loading="lazy"></figure>
+      </div>
+      <p class="small-note">IB learner profile displays on the classroom wall.</p>
+      </div>
+
+      <div class="sub-head">
+        <h3>Working with families</h3>
+        <p>As a homeroom teacher I built partnerships with families through regular communication about academic progress, wellbeing and individual needs.</p>
+      </div>
+      <dl class="fam-points" style="max-width: 40em">
+        <div><dt>What I share</dt><dd>Academic progress, wellbeing and each child's individual needs.</dd></div>
+        <div><dt>How</dt><dd>Daily feedback to families and one-on-one parent meetings.</dd></div>
+        <div><dt>What it is for</dt><dd>School and home working together to support the child's development in both places.</dd></div>
+      </dl>
+
+      <div class="sub-head">
+        <h3>A note home, and the reply</h3>
+        <p>Two screenshots from one conversation with the parent of a Grade 3 student. Blue bubbles are my messages.</p>
+      </div>
+      <div class="pair">
+        <figure class="fb"><img src="fb-ivy1.jpg" alt="Chat screenshot: two messages from KK and a reply from a parent" width="760" height="1080" loading="lazy"><figcaption><span class="tr">Translation</span><p><span class="spk">KK:</span> At first she didn't want to do it and said she hadn't learned it by heart well enough. I encouraged her to give it a try, and said that if she wasn't happy with it this time, we could do it once more next Tuesday. But if memorising it is too tiring for her, we'll simply keep working at it in the next round of speeches!</p><p><span class="spk">KK:</span> Today's dictation was great. Apart from “weather”, a word I added at random today, she got all the others right. Ivy has been really committed to her learning lately.</p><p><span class="spk">Parent:</span> Since Ivy joined this class, her motivation to learn has gone up. That she herself is willing to learn English is something that has really delighted and surprised me. In the car on the way to school today she even told me she was full of confidence! Being nervous and shy for a first speech is fine. What I am most grateful for is your guidance. The parents all think extremely highly of you. Thank you, teacher.</p></figcaption></figure>
+        <figure class="fb"><img src="fb-ivy2.jpg" alt="Chat screenshot: a long message from KK and a reply from the same parent" width="760" height="1203" loading="lazy"><figcaption><span class="tr">Translation</span><p><span class="spk">KK:</span> That's wonderful, I'm so pleased too! Lately I can clearly feel that Ivy's motivation to learn is especially high. As soon as she saw me today she was urging me to hurry up with the dictation, hahaha, so sweet. She has made great progress with speeches too. When she first heard in class that there would be speeches, she told me she was too shy around people and asked whether she could stay off the stage. I guided her gradually, and I think today's first speech was already excellent. Every child has a different personality. Sometimes they prepare very thoroughly, get nervous on stage and forget a little of the content. That is perfectly normal, but I can see her growth and her breakthrough very clearly. I can tell how much care and support you give Ivy's learning at home. Thank you!</p><p><span class="spk">Parent:</span> Having an especially wonderful teacher during one's school years is a great happiness for both me and my child. I can still remember the teachers who helped me enormously when I was at school. For a child to like a subject, the teacher's own charm is a hugely important thing.</p></figcaption></figure>
+      </div>
+
+      <div class="sub-head">
+        <h3>What parents say</h3>
+        <p>Original messages from parents, who know me as KK. Chinese names are covered in the images and shown as [brackets] in the translations.</p>
+      </div>
+      <div class="fbs">
+        <figure class="fb"><img src="fb-arthur.jpg" alt="Original message in Chinese, names covered" width="760" height="919" loading="lazy"><figcaption><span class="tr">Translation</span><p>…the teachers and classmates by whom he was always understood, seen and supported. Arthur and I love you very, very much. I think you will do extremely well in the field of English teaching. I can see how serious, loving, open, constantly learning and full of creativity you are about your teaching. At the same time, you are especially good at seeing what shines in children and encouraging them to become better versions of themselves. I am truly very, very sad to part with such a good teacher, and at the same time very, very grateful to you for accompanying Arthur as he grew, letting him be himself and helping him become better. My heart is full of gratitude, and I often marvel at how lucky Arthur was to meet you, KK. We will always love you and always keep the memories of this wonderful journey. Your teaching and love for Arthur have become a very important part of his childhood, and he will carry them with him as he goes on. With gratitude.</p><p class="small-note">The screenshot begins mid-message.</p></figcaption></figure>
+        <figure class="fb"><img src="fb-n14.jpg" alt="Original message in Chinese" width="760" height="560" loading="lazy"><figcaption><span class="tr">Translation</span><p>Thank you, KK, for the meticulous teaching and help you gave the children during your time as homeroom teacher. You are an excellent educator, deeply loved by the children and the parents. Once again, our deepest thanks! We will actively support the work of Teacher Li and Teacher Ma and look after the children's growth together. Thank you!</p></figcaption></figure>
+        <figure class="fb"><img src="fb-n15.jpg" alt="Original message in Chinese" width="760" height="616" loading="lazy"><figcaption><span class="tr">Translation</span><p>Dear KK, I have always been grateful that, when we had just arrived at FLA, we met a teacher like you: one with great love in her heart, very approachable, conscientious and responsible. Your attentive teaching lets the children grow up in trust. You discover the children's strengths and encourage every bit of progress they make. We see your dedication and are moved by it. Thank you, dear KK.</p></figcaption></figure>
+        <figure class="fb"><img src="fb-n16.jpg" alt="Original message in Chinese" width="760" height="453" loading="lazy"><figcaption><span class="tr">Translation</span><p>Thank you, KK, for your dedication over these two years. My child is very lucky to have met such a good homeroom teacher on first arriving in Hainan. Put the load down and have a good rest. The children can still keep learning and improving with you in their English lessons.</p></figcaption></figure>
+        <figure class="fb"><img src="msg-5.jpg" alt="Original message in Chinese, name covered" width="800" height="758" loading="lazy"><figcaption><span class="tr">Translation</span><p>KK, I have very mixed feelings on seeing this news. [Her] progress and growth in English this half term are entirely down to your guidance, encouragement and kindness, and to your professional teaching skill and ability. Without your company this half term, who knows when her interest and confidence in English as a subject would ever have been kindled! For a child to meet a teacher she loves, in her studies and in life, is the greatest good fortune.</p></figcaption></figure>
+        <figure class="fb"><img src="fb-claire.jpg" alt="Chat screenshot: a message from KK and a parent&#x27;s reply" width="760" height="457" loading="lazy"><figcaption><span class="tr">Translation</span><p><span class="spk">KK:</span> Claire's dad, Claire came first in the class again in this end-of-term school exam!</p><p><span class="spk">Parent:</span> That's because you teach so well, KK. Thank you! Since you began teaching Claire, she has fallen in love with English. Thank you too for giving her the chance to host in English. She is slowly becoming willing to challenge herself.</p></figcaption></figure>
+        <figure class="fb"><img src="fb-n5.jpg" alt="Original message in Chinese" width="760" height="687" loading="lazy"><figcaption><span class="tr">Translation</span><p>I read the message on the card carefully twice and was truly moved. The one we are saddest to leave is KK. I thought again of the little school-rules video you made last year and this year's 20 May campus interviews. I really loved them. I believe that with your talent and hard work, your sensitivity and sincerity, more and better children and parents will come to like you and recognise you in the future. Even if there are small disappointments in work and life, they will be healed by love. Be sure to get in touch when you come to Shenzhen.</p></figcaption></figure>
+        <figure class="fb"><img src="fb-card.jpg" alt="A handwritten farewell card from KK to a student, in English on the left and Chinese on the right" width="850" height="605" loading="lazy"><figcaption><span class="tr">Translation</span><p>Dear Alan, when I heard you were changing schools, my first reaction was reluctance and sadness. Over the past three years you have often given your teachers and classmates very warm and happy memories. KK wants to tell you that KK is truly very proud of you. Thank you so much for always being so hardworking, motivated, kind and upright. Thank you for growing up so well, and thank you for being my student. I hope Alan will be even happier at your new school, make more good friends and love English even more. KK will always support you!</p><p class="small-note">A farewell card I wrote to a student, 11 June 2024. The translation is of the Chinese side.</p></figcaption></figure>
+        <figure class="fb"><img src="fb-alex.jpg" alt="Original message in Chinese, names covered" width="760" height="531" loading="lazy"><figcaption><span class="tr">Translation</span><p>Oh KK, my feelings on hearing this news are so mixed. Thank you for the love you have always shown Alex and [my other child]. Whether you were their homeroom teacher or only their English teacher, both of them have taken you deep into their hearts and truly adore you. May I ask, are you still in Hainan, or have you taken up a post in another province?</p></figcaption></figure>
+        <figure class="fb"><img src="fb-sj.jpg" alt="Original message in Chinese, name covered" width="760" height="531" loading="lazy"><figcaption><span class="tr">Translation</span><p>KK, it is with great reluctance that I tell you some news: [my son] will be going to school at ischool from September. We enrolled him and paid the fees today. The teacher he is saddest to leave is you! So am I! You are a rare, good teacher. Wherever you are, I hope you keep walking the path of education with conviction. Having you is a blessing for the children. I really like you so much!</p></figcaption></figure>
+        <figure class="fb"><img src="fb-arthur-term.jpg" alt="Original message in Chinese, names covered" width="588" height="568" loading="lazy"><figcaption><span class="tr">Translation</span><p>KK, you are an especially, especially dedicated teacher. Meeting you is Arthur's good fortune too. I can feel Arthur's progress this term. His reading ability has improved, and he is both more accurate and faster. Your lessons are also varied and fun, and the children have more chances to use what they learn and to show themselves. You are Arthur's favourite teacher, and I hope we carry on working together happily next term. Over the holiday, English must not be dropped. Wishing you and your family a Merry Christmas and a Happy Spring Festival. Keep well.</p></figcaption></figure>
+        <figure class="fb"><img src="fb-xx.jpg" alt="Original message in Chinese, name covered" width="760" height="360" loading="lazy"><figcaption><span class="tr">Translation</span><p>KK, thank you for looking after and teaching [my daughter] all this time. You are [her] favourite teacher. Next term we are transferring to a school in Haikou. When we have a free weekend we will come back to Clearwater Bay to see you. Wishing you all the best and every success at work. Love you.</p></figcaption></figure>
+        <figure class="fb"><img src="msg-2.jpg" alt="Original message in Chinese" width="835" height="287" loading="lazy"><figcaption><span class="tr">Translation</span><p>My child used to really resist English. Now they look forward to your lessons every day. You have completely brought out their interest. Thank you so much!</p></figcaption></figure>
+        <figure class="fb"><img src="fb-td.jpg" alt="Original message in Chinese, name covered" width="760" height="316" loading="lazy"><figcaption><span class="tr">Translation</span><p>KK, I can really see that loving you leads to loving English. [My child] takes English seriously precisely because they really like you. Thank you.</p></figcaption></figure>
+        <figure class="fb"><img src="msg-1.jpg" alt="Original message in Chinese" width="862" height="299" loading="lazy"><figcaption><span class="tr">Translation</span><p>I really must thank you, KK. My child has not only gained knowledge but also likes English more and more, and that matters more than anything.</p></figcaption></figure>
+        <figure class="fb"><img src="fb-qm.jpg" alt="Chat screenshot of three messages from a parent, name and one sentence covered" width="760" height="1081" loading="lazy"><figcaption><span class="tr">Translation</span><p>There are two things I would like to trouble you with.</p><p>[My son] would like to take your English class.</p><p>I sat in on the lesson this morning and thought you taught it so well. Because his English foundation is rather weak, […] He took your English calligraphy class before and really likes your teaching. How shall I put it, interest is the best teacher, so I can only ask whether he could transfer to your class.</p><p class="small-note">One sentence about another class is covered. The green bubble is my reply, “Of course, go ahead.”</p></figcaption></figure>
+        <figure class="fb"><img src="fb-n17.jpg" alt="Original message in Chinese" width="760" height="244" loading="lazy"><figcaption><span class="tr">Translation</span><p>Dear KK, thank you for your love and teaching for my child. Thank you so much, you have worked so hard! How lucky we are to have met a teacher as responsible as you, and one my child likes too…</p><p class="small-note">The screenshot ends mid-message.</p></figcaption></figure>
+        <figure class="fb"><img src="fb-aa.jpg" alt="Original message in Chinese" width="760" height="174" loading="lazy"><figcaption><span class="tr">Translation</span><p>Such a lovely and outstanding young woman. It really is too great a loss for FLA.</p></figcaption></figure>
+        <figure class="fb"><img src="fb-mark.jpg" alt="A parent message written in English" width="588" height="1072" loading="lazy"><figcaption><p class="small-note">Written in English by a parent after a class debate.</p></figcaption></figure>
+        <figure class="fb"><img src="card-student.jpg" alt="Two handwritten cards with a small photo placed on top" width="588" height="440" loading="lazy"><figcaption><p class="small-note">Handwritten cards I received.</p></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="continuum" data-view="experience" aria-labelledby="continuum-title">
+    <div class="wrap">
+      <div class="continuum-head">
+        <h2 id="continuum-title">My IB experience</h2>
+        <p>The three IB programmes by student age, and what I bring to each.</p>
+      </div>
+
+      <div role="img" aria-label="Chart of IB programme age ranges: PYP ages 3 to 12, MYP ages 11 to 16, DP ages 16 to 19.">
+        <div class="axis" aria-hidden="true">
+          <span style="left:0%">Age 3</span>
+          <span style="left:50%">11</span>
+          <span style="left:56.25%">12</span>
+          <span style="left:81.25%">16</span>
+          <span style="left:100%">19</span>
+        </div>
+        <div class="bars" aria-hidden="true">
+          <div class="bar pyp">PYP</div>
+          <div class="bar myp">MYP</div>
+          <div class="bar dp">DP</div>
+        </div>
+      </div>
+
+      <ul class="programmes">
+        <li>
+          <h3><span class="chip pyp"></span>Primary Years Programme</h3>
+          <span class="ages">Ages 3–12 · certified</span>
+          <p>IB Certificate in Teaching and Learning (PYP). I applied PYP approaches in my primary classes at Future Leadership Academy from 2021 to 2026. The school itself was not an IB school.</p>
+        </li>
+        <li>
+          <h3><span class="chip myp"></span>Middle Years Programme</h3>
+          <span class="ages">Ages 11–16 · teaching since Aug 2026</span>
+          <p>MYP Language Acquisition (English) at a fully authorised IB World School in Guangzhou: planning by concept and global context, teaching by phase, and assessing against the four criteria.</p>
+        </li>
+        <li>
+          <h3><span class="chip dp"></span>Diploma Programme</h3>
+          <span class="ages">Ages 16–19 · teaching since Aug 2026</span>
+          <p>DP English B at the same school.</p>
+        </li>
+      </ul>
+
+      <div class="conf conf3">
+        <figure class="pic cover" style="--ar: 5 / 4"><img src="conf-speaking.jpg" alt="Kirk Shi speaking into a microphone from the audience at a conference" width="900" height="720" loading="lazy"></figure>
+        <figure class="pic cover" style="--ar: 4 / 5"><img src="conf-talking.jpg" alt="Kirk Shi in conversation during a conference break" width="720" height="900" loading="lazy"></figure>
+        <figure class="pic cover" style="--ar: 3 / 4"><img src="conf-bookfair.jpg" alt="Kirk Shi talking with an exhibitor at a table of textbooks" width="660" height="880" loading="lazy"></figure>
+        <figure class="pic cover" style="--ar: 4 / 5"><img src="portrait.jpg" alt="Kirk Shi smiling during a conference workshop" width="720" height="900" loading="lazy"></figure>
+      </div>
+      <p class="conf-cap">Professional learning: at the 2026 IES Concept-Based Learning Conference, and at a publishers' exhibition.</p>
+    </div>
+  </section>
+
+  <section id="experience" data-view="experience" aria-labelledby="experience-title">
+    <div class="wrap split">
+      <header><h2 id="experience-title">Experience</h2></header>
+      <div class="roles">
+
+        <article class="role">
+          <span class="when">Aug 2026 – Present</span>
+          <h3>MYP Language Acquisition &amp; DP English B Teacher</h3>
+          <p class="where">Guangzhou Zhongshan Whampoa School for Hong Kong and Macao Students · Guangzhou, China · Fully authorised IB World School</p>
+          <ul>
+            <li>Teach MYP Language Acquisition (English) and DP English B, planning units with department colleagues around MYP concepts, global contexts and statements of inquiry.</li>
+            <li>Personalise teaching by MYP phase, adapting texts, tasks and scaffolding so that students working at different phases make progress within the same class.</li>
+            <li>Use formative assessment (quizzes, exit tickets, oral conferencing, drafts with written feedback, and peer and self-assessment) to track progress and adjust subsequent teaching.</li>
+            <li>Design and mark summative assessment tasks against the MYP Language Acquisition criteria for listening, reading, speaking and writing, using the results to report progress and plan next steps.</li>
+            <li>Reviewed and updated the school's Language Acquisition outline so that it reflects the needs and proficiency profile of its students.</li>
+            <li>Integrate AI into English teaching, using AI tools to diagnose students' English proficiency and target support where it is needed.</li>
+            <li>Run tutorials for students who need additional support and lead the English Public Speaking Club as an extra-curricular activity (ECA). Organised the school's English Day.</li>
+          </ul>
+        </article>
+
+        <article class="role">
+          <span class="when">Sep 2021 – Aug 2026</span>
+          <h3>English (ESL/ELA) Teacher, Grades 1–8</h3>
+          <p class="where">Future Leadership Academy · Hainan, China · Bilingual international school</p>
+          <span class="also">Homeroom Teacher &amp; English Department Co-Lead, 2022 – 2024</span>
+          <ul>
+            <li>Taught English (ESL/ELA) to additional-language learners from Grade 1 to Grade 8, including lower-secondary classes in Grades 7–8, through inquiry-based units modelled on the IB PYP.</li>
+            <li>Planned for different levels of readiness and English proficiency through differentiation, scaffolding and extension, helping students participate confidently and become more independent learners.</li>
+            <li>Used formative assessment, learning journals and student reflection, alongside MAP and CEM data, to monitor progress and adjust teaching. Used AI tools to give each student individual speaking, reading and writing practice.</li>
+            <li>As Homeroom Teacher (2022–2024), held day-to-day responsibility for students' learning, wellbeing and behaviour, and built a caring, inclusive class community that earned “Star Class” recognition.</li>
+            <li>As English Department Co-Lead, led the department jointly with the Foreign Lead. Contributed to curriculum development and differentiated English programmes across grade levels, and mentored 10 teachers through lesson observations, collaborative planning, professional development and instructional coaching.</li>
+            <li>Led students to a 100% Cambridge KET pass rate and district-leading English assessment results for three consecutive years. Received School Outstanding Teacher recognition.</li>
+          </ul>
+        </article>
+
+        <article class="role">
+          <span class="when">Jul 2019 – Sep 2021</span>
+          <h3>IELTS / GMAT Instructor</h3>
+          <p class="where">Shanghai Xiaoshen Education Co., Ltd. · China</p>
+          <ul>
+            <li>Taught IELTS Listening and Reading and GMAT Reading and Sentence Correction, adapting instruction to learner needs, tracking progress and keeping in regular contact with families.</li>
+            <li>Lead editor of an IELTS listening and speaking foundation coursebook used in the programme.</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="credentials" data-view="credentials" aria-labelledby="credentials-title">
+    <div class="wrap split">
+      <header><h2 id="credentials-title">Credentials</h2></header>
+      <div class="cred-groups">
+        <div>
+          <h3>Education</h3>
+          <ul class="cred">
+            <li><strong>Master of Education</strong><span class="when">Sep 2025 – Jun 2028</span><span class="sub">Zhejiang University · in progress</span></li>
+            <li><strong>BA in English Language and Literature</strong><span class="when">Sep 2015 – Jun 2019</span><span class="sub">Sichuan University</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Professional qualifications</h3>
+          <ul class="cred">
+            <li><strong>Cambridge CELTA</strong><span class="when">Feb 2024</span><span class="sub">Level 5 Certificate in Teaching English to Speakers of Other Languages</span></li>
+            <li><strong>IB Certificate in Teaching and Learning (PYP)</strong><span class="when">Aug 2024</span><span class="sub">University of Windsor</span></li>
+            <li><strong>Senior High School English Teacher Certification</strong><span class="sub">China</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Languages</h3>
+          <ul class="cred">
+            <li><strong>English</strong><span class="sub">IELTS Band 8 · TEM-8 (Test for English Majors)</span></li>
+            <li><strong>Mandarin Chinese</strong><span class="sub">Native</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" data-view="contact" class="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+      <h2 id="contact-title">Get in touch</h2>
+      <p>For MYP and DP English roles, or a conversation about language acquisition, email me.</p>
+      <div class="mail-row">
+        <a class="mail" href="mailto:kay1212@foxmail.com">kay1212@foxmail.com</a>
+        <button class="copy" id="copy-email" type="button">Copy email address</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<nav class="pager" id="pager" aria-label="Previous and next page"></nav>
+
+<a class="totop" id="totop" href="#top">↑ Back to top</a>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Kirk Shi</span>
+    <span>MYP Language Acquisition (English) Teacher</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var btn = document.getElementById('copy-email');
+  if (!btn) return;
+  var label = btn.textContent;
+  btn.addEventListener('click', function () {
+    var done = function (text) {
+      btn.textContent = text;
+      setTimeout(function () { btn.textContent = label; }, 2200);
+    };
+    try {
+      navigator.clipboard.writeText('kay1212@foxmail.com').then(
+        function () { done('Copied'); },
+        function () { done('Select the address to copy'); }
+      );
+    } catch (e) {
+      done('Select the address to copy');
+    }
+  });
+})();
+
+(function () {
+  var order = ['home', 'philosophy', 'myp', 'technology', 'practice', 'assignments', 'activities', 'families', 'experience', 'credentials', 'contact'];
+  var names = { home: 'Home', philosophy: 'Philosophy', myp: 'MYP Teaching', technology: 'Technology', practice: 'Inquiry Units', assignments: 'Assignments', activities: 'Activities', families: 'Families', experience: 'Experience', credentials: 'Credentials', contact: 'Contact' };
+  var alias = { '': 'home', top: 'home', about: 'home' };
+  var views = Array.prototype.slice.call(document.querySelectorAll('[data-view]'));
+  var links = Array.prototype.slice.call(document.querySelectorAll('.top nav a'));
+  var pager = document.getElementById('pager');
+  var totop = document.getElementById('totop');
+  var skip = document.getElementById('skip');
+  var main = document.getElementById('top');
+
+  function current() {
+    var id = (location.hash || '').replace('#', '');
+    if (Object.prototype.hasOwnProperty.call(alias, id)) id = alias[id];
+    return order.indexOf(id) < 0 ? 'home' : id;
+  }
+  function target(id) { return id === 'home' ? '#top' : '#' + id; }
+  function show(toTop) {
+    var id = current();
+    views.forEach(function (v) { v.classList.toggle('on', v.getAttribute('data-view') === id); });
+    links.forEach(function (a) {
+      var t = a.getAttribute('href').replace('#', '');
+      if (Object.prototype.hasOwnProperty.call(alias, t)) t = alias[t];
+      if (t === id) {
+        a.setAttribute('aria-current', 'page');
+        var nav = a.closest('nav');
+        if (nav && nav.scrollWidth > nav.clientWidth) nav.scrollLeft = a.offsetLeft - nav.clientWidth / 2 + a.offsetWidth / 2;
+      } else { a.removeAttribute('aria-current'); }
+    });
+    if (pager) {
+      var n = order.indexOf(id), html = '';
+      if (id !== 'home') {
+        var prev = order[n - 1], next = order[n + 1];
+        html += '<a class="prev" href="' + target(prev) + '"><small>← Previous</small>' + names[prev] + '</a>';
+        html += '<a class="home" href="#top"><small>Back to</small>Home</a>';
+        html += next ? '<a class="next" href="' + target(next) + '"><small>Next →</small>' + names[next] + '</a>' : '<span></span>';
+      }
+      pager.innerHTML = html;
+    }
+    if (toTop) window.scrollTo(0, 0);
+    if (totop) totop.classList.toggle('show', window.scrollY > 500);
+  }
+  window.addEventListener('hashchange', function () { show(true); });
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest ? e.target.closest('a[href^="#"]') : null;
+    if (!a || a === totop || a === skip) return;
+    var t = a.getAttribute('href').replace('#', '');
+    if (Object.prototype.hasOwnProperty.call(alias, t)) t = alias[t];
+    if (t === current()) { e.preventDefault(); window.scrollTo(0, 0); }
+  });
+  if (totop) {
+    totop.addEventListener('click', function (e) { e.preventDefault(); window.scrollTo(0, 0); });
+    window.addEventListener('scroll', function () { totop.classList.toggle('show', window.scrollY > 500); }, { passive: true });
+  }
+  if (skip && main) skip.addEventListener('click', function (e) { e.preventDefault(); main.focus(); });
+  show(true);
+})();
+</script>
+</body>
+</html>
